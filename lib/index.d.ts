@@ -110,9 +110,9 @@ export interface StatusBar {
     createItem(alignment: number, priority: number, globalId?: string): StatusBarItem;
 }
 export interface Process {
-    execNodeScript(scriptPath: string, args?: string[], options?: ChildProcess.ExecOptions, callback?: (err: any, stdout: string, stderr: string) => void): ChildProcess.ChildProcess;
-    spawnNodeScript(scriptPath: string, args?: string[], options?: ChildProcess.SpawnOptions): ChildProcess.ChildProcess;
-    spawnProcess(startCommand: string, args?: string[], options?: ChildProcess.SpawnOptions): ChildProcess.ChildProcess;
+    execNodeScript(scriptPath: string, args?: string[], options?: ChildProcess.ExecOptions, callback?: (err: any, stdout: string, stderr: string) => void): Promise<ChildProcess.ChildProcess>;
+    spawnNodeScript(scriptPath: string, args?: string[], options?: ChildProcess.SpawnOptions): Promise<ChildProcess.ChildProcess>;
+    spawnProcess(startCommand: string, args?: string[], options?: ChildProcess.SpawnOptions): Promise<ChildProcess.ChildProcess>;
 }
 export interface StatusBarItem {
     show(): void;
