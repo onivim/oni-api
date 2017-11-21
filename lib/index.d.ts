@@ -3,21 +3,22 @@
 import * as ChildProcess from "child_process";
 import { EventEmitter } from "events";
 import * as types from "vscode-languageserver-types";
-import { Event, IEvent } from "oni-types";
+import { IEvent } from "oni-types";
 export declare type DisposeFunction = () => void;
 export interface IToken {
     tokenName: string;
     range: types.Range;
 }
+export declare type ConfigurationValues = {
+    [key: string]: any;
+};
 export interface Configuration {
-    onConfigurationChanged: Event<any>;
+    onConfigurationChanged: IEvent<ConfigurationValues>;
     getValue<T>(configValue: string, defaultValue?: T): T;
-    setValues(configurationValues: {
-        [configValue: string]: any;
-    }): void;
+    setValues(configurationValues: ConfigurationValues): void;
 }
 export interface Workspace {
-    onDirectoryChanged: Event<string>;
+    onDirectoryChanged: IEvent<string>;
 }
 export interface IWindowManager {
     split(direction: number, split: IWindowSplit): void;
@@ -118,44 +119,6 @@ export interface StatusBarItem {
     hide(): void;
     setContents(element: JSX.Element): void;
     dispose(): void;
-}
-/**
- * Describes the change of an entire buffer
- */
-export interface BufferUpdateContext {
-    bufferLines: string[];
-    eventContext: EventContext;
-}
-/**
- * Incremental buffer update describes the change for a particular line of a document
- */
-export interface IncrementalBufferUpdateContext {
-    lineNumber: number;
-    bufferLine: string;
-    eventContext: EventContext;
-}
-export interface EventContext {
-    bufferFullPath: string;
-    bufferTotalLines: number;
-    bufferNumber: number;
-    modified: boolean;
-    hidden: boolean;
-    listed: boolean;
-    version: number;
-    line: number;
-    /**
-     * Column within the buffer
-     */
-    column: number;
-    byte: number;
-    filetype: string;
-    windowNumber: number;
-    wincol: number;
-    winline: number;
-    windowTopLine: number;
-    windowBottomLine: number;
-    windowWidth: number;
-    windowHeight: number;
 }
 export declare namespace Vim {
     type Mode = "normal" | "visual" | "insert";
