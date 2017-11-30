@@ -31,7 +31,7 @@ export interface IWindowManager {
     moveRight(): void
     moveDown(): void
     moveUp(): void
-    close(editor: Editor): void
+    close(split: IWindowSplit): void
 }
 
 export interface IWindowSplit {
