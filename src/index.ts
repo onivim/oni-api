@@ -75,6 +75,7 @@ export interface Editor {
     onBufferEnter: IEvent<EditorBufferEventArgs>
     onBufferLeave: IEvent<EditorBufferEventArgs>
     onBufferChanged: IEvent<EditorBufferChangedEventArgs>
+    onBufferScrolled: IEvent<EditorBufferScrolledEventArgs>
     onBufferSaved: IEvent<EditorBufferEventArgs>
 
     // Optional capabilities for the editor to implement
@@ -84,6 +85,12 @@ export interface Editor {
 export interface EditorBufferChangedEventArgs {
     buffer: Buffer
     contentChanges: types.TextDocumentContentChangeEvent[]
+}
+
+export interface EditorBufferScrolledEventArgs {
+    bufferTotalLines: number
+    windowTopLine: number
+    windowBottomLine: number
 }
 
 export interface Buffer {
