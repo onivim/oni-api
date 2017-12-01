@@ -55,12 +55,18 @@ export interface Editor {
     onBufferEnter: IEvent<EditorBufferEventArgs>;
     onBufferLeave: IEvent<EditorBufferEventArgs>;
     onBufferChanged: IEvent<EditorBufferChangedEventArgs>;
+    onBufferScrolled: IEvent<EditorBufferScrolledEventArgs>;
     onBufferSaved: IEvent<EditorBufferEventArgs>;
     neovim?: NeovimEditorCapability;
 }
 export interface EditorBufferChangedEventArgs {
     buffer: Buffer;
     contentChanges: types.TextDocumentContentChangeEvent[];
+}
+export interface EditorBufferScrolledEventArgs {
+    bufferTotalLines: number;
+    windowTopLine: number;
+    windowBottomLine: number;
 }
 export interface Buffer {
     id: string;
