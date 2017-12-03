@@ -240,5 +240,6 @@ export namespace Plugin {
         process: Process
         statusBar: StatusBar
         workspace: Workspace
+        windows: IWindowManager
     }
 }
