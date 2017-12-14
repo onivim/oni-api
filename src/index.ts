@@ -220,6 +220,10 @@ export namespace Menu {
     }
 }
 
+export interface IColors {
+    getColor(colorName: string): string | null
+}
+
 export namespace Plugin {
     export namespace Diagnostics {
         export interface Api {
@@ -241,5 +245,6 @@ export namespace Plugin {
         statusBar: StatusBar
         workspace: Workspace
         windows: IWindowManager
+        colors: IColors
     }
 }
