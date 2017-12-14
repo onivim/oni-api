@@ -169,6 +169,9 @@ export declare namespace Menu {
         pinned?: boolean;
     }
 }
+export interface IColors {
+    getColor(colorName: string): string | null;
+}
 export declare namespace Plugin {
     namespace Diagnostics {
         interface Api {
@@ -189,5 +192,6 @@ export declare namespace Plugin {
         statusBar: StatusBar;
         workspace: Workspace;
         windows: IWindowManager;
+        colors: IColors;
     }
 }
