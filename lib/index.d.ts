@@ -113,7 +113,7 @@ export interface Log {
 }
 export interface StatusBar {
     getItem(globalId?: string): StatusBarItem;
-    createItem(alignment: number, priority: number, globalId?: string): StatusBarItem;
+    createItem(alignment: number, globalId?: string): StatusBarItem;
 }
 export interface Process {
     execNodeScript(scriptPath: string, args?: string[], options?: ChildProcess.ExecOptions, callback?: (err: any, stdout: string, stderr: string) => void): Promise<ChildProcess.ChildProcess>;
