@@ -1,6 +1,6 @@
 {
   "name": "oni-api",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Oni's API layer",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -8,9 +8,9 @@
     "build": "rimraf lib && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "files": {
+  "files": [
       "./lib"
-  },
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/onivim/oni-api.git"
