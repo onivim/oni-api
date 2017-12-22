@@ -2,7 +2,6 @@ language: node_js
 node_js: 8
 script:
 - npm run build
-- cd lib && ls -a
 deploy:
   provider: npm
   email: bryphe@outlook.com
