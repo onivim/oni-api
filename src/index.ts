@@ -5,8 +5,6 @@ import * as types from "vscode-languageserver-types"
 
 import { Event, IEvent } from "oni-types"
 
-import * as Automation from "./Automation"
-
 export type DisposeFunction = () => void
 
 export interface IToken {
