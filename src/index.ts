@@ -5,6 +5,8 @@ import * as types from "vscode-languageserver-types"
 
 import { Event, IEvent } from "oni-types"
 
+import * as Automation from "./Automation"
+
 export type DisposeFunction = () => void
 
 export interface IToken {
@@ -170,16 +172,6 @@ export interface StatusBarItem {
 
 export namespace Vim {
     export type Mode = "normal" | "visual" | "insert"
-}
-
-export namespace Automation {
-    // Api surface area for automated testing
-    export interface Api {
-        sendKeys(input: string): void
-        waitFor(condition: () => boolean, timeout: number): Promise<void>
-
-        runTest(testPath: string): Promise<void>
-    }
 }
 
 export namespace Coordinates {
