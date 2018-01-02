@@ -5,6 +5,8 @@ import * as types from "vscode-languageserver-types"
 
 import { Event, IEvent } from "oni-types"
 
+import * as Commands from "./Commands"
+
 export type DisposeFunction = () => void
 
 export interface IToken {
@@ -153,23 +155,6 @@ export interface EditorBufferEventArgs {
     filePath: string
 }
 
-export type ICommandCallback = (args?: any) => any
-export type ICommandEnabledCallback = () => boolean
-
-export interface ICommand {
-    command: string
-    name: string
-    detail: string
-    enabled?: ICommandEnabledCallback
-    messageSuccess?: string
-    messageFail?: string
-    execute: ICommandCallback
-}
-
-export interface Commands {
-    registerCommand(command: ICommand): void
-}
-
 export interface Log {
     verbose(msg: string): void
     info(msg: string): void
@@ -251,6 +236,7 @@ export namespace Plugin {
 
     export interface Api extends EventEmitter {
         automation: Automation.Api
+        commands: Commands.Api
         configuration: Configuration
         contextMenu: any /* TODO */
         diagnostics: Diagnostics.Api
