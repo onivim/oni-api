@@ -73,6 +73,34 @@ export interface InputManager {
     unbindAll(): void
 }
 
+/**
+ * Automation API definition
+ *
+ * The Automation API provides a set of utilities
+ * geared towards testing Oni's functionality.
+ */
+export namespace Automation {
+    export type WaitConditionChecker = () => boolean
+
+    export interface Api {
+
+        // Send input directly to the active editor
+        sendKeys(key: string): void
+
+        // Utility method to delay test execution for a specified period of time.
+        // Should be used sparingly, and often can be replaced with a determinitisc
+        // `waitFor` condition.
+        sleep(time: number): Promise<void>
+
+        // Wait for a specific condition to be true within a time limit.
+        // If not true by the expiration time, the test will register a failure
+        waitFor(condition: WaitConditionChecker, timeout: number): Promise<void>
+
+        // Wait for an editor to be initialized
+        waitForEditors(): Promise<void>
+    }
+}
+
 export interface NeovimEditorCapability {
 
     // Call a VimL function and return the result
@@ -177,16 +205,6 @@ export interface StatusBarItem {
 
 export namespace Vim {
     export type Mode = "normal" | "visual" | "insert"
-}
-
-export namespace Automation {
-    // Api surface area for automated testing
-    export interface Api {
-        sendKeys(input: string): void
-        waitFor(condition: () => boolean, timeout: number): Promise<void>
-
-        runTest(testPath: string): Promise<void>
-    }
 }
 
 export namespace Coordinates {
