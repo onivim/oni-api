@@ -147,7 +147,6 @@ export interface EditorLayer {
  * EditorLayerRenderContext 
  */
 export interface EditorLayerRenderContext {
-    
     isActive: boolean
 
     windowId: number
