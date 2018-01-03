@@ -69,6 +69,7 @@ export interface EditorManager {
 
 export interface InputManager {
     bind(keyChord: string | string[], actionFunction: any, filterFunction?: () => boolean): void
+    hasBinding(keyChord: string): boolean
     unbind(keyChord: string | string[]): void
     unbindAll(): void
 }
