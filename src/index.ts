@@ -94,7 +94,7 @@ export namespace Automation {
 
         // Wait for a specific condition to be true within a time limit.
         // If not true by the expiration time, the test will register a failure
-        waitFor(condition: WaitConditionChecker, timeout: number): Promise<void>
+        waitFor(condition: WaitConditionChecker, timeout?: number): Promise<void>
 
         // Wait for an editor to be initialized
         waitForEditors(): Promise<void>
