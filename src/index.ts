@@ -154,7 +154,7 @@ export interface EditorLayerRenderContext {
 
     bufferToScreen: Coordinates.BufferToScreen
     screenToPixel: Coordinates.ScreenToPixel
-    dimensions: Rectangle
+    dimensions: Shapes.Rectangle
 }
 
 export interface Editor {
