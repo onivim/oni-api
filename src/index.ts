@@ -117,6 +117,45 @@ export interface NeovimEditorCapability {
     command(command: string): Promise<void>
 }
 
+/**
+ * An EditorLayer is a UI overlay presented over a buffer.
+ *
+ * This allows for all manners of custom rendering - whether it is simply
+ * overlaying tokens or showing adorners, or completely overriding the
+ * rendering layer of the buffer.
+ */
+export interface EditorLayer {
+
+    /**
+     * Unique id for the buffer layer. This must be globally unique and is used to reference the layer.
+     */
+    id: string
+
+    /**
+     * `friendlyName` is used when showing the layer int eh UI
+     */
+    friendlyName?: string
+
+    /**
+     * `render` returns a custom UI element. Note that this may be called multiple times per buffer,
+     * if there are multiple windows with the same buffer.
+     */
+    render(context: EditorLayerRenderContext): JSX.Element
+}
+
+/**
+ * EditorLayerRenderContext 
+ */
+export interface EditorLayerRenderContext {
+    isActive: boolean
+
+    windowId: number
+
+    bufferToScreen: Coordinates.BufferToScreen
+    screenToPixel: Coordinates.ScreenToPixel
+    dimensions: Shapes.Rectangle
+}
+
 export interface Editor {
     mode: string
     onModeChanged: IEvent<Vim.Mode>
@@ -156,6 +195,7 @@ export interface Buffer {
 
     lineCount: number
 
+    addLayer(layer: EditorLayer): void
     applyTextEdits(edit: types.TextEdit | types.TextEdit[]): Promise<void>
     getLines(start?: number, end?: number): Promise<string[]>
     getTokenAt(line: number, column: number): Promise<IToken>
@@ -208,10 +248,56 @@ export namespace Vim {
     export type Mode = "normal" | "visual" | "insert"
 }
 
+// In Oni, there are 3 main coordinate systems we reference when looking at building a
+// rich UI feature.
+//
+// - *Buffer Space* - this is a zero-based line and column referencing a position in a buffer.
+// - *Screen Space* - this is the zero-based x,y position of a cell in the screen grid.
+// - *Pixel Space* - this is the actual pixel coordinate of an item.
+//
+// For rich UI features, like showing an error squiggle, being able to map from 'buffer space' to 'pixel space'
+// is important so that we can show UI in the appropriate place. This mapping is really dependent on the
+// dimensions of the window, because the same buffer shown in different size windows will have a different
+// mapping from buffer space -> screen space.
+//
+// The mapping from screen space to pixel space is very simple, as this is purely dependent on the cell size
+// (which is based on the font width / height)
 export namespace Coordinates {
     export interface PixelSpacePoint {
         pixelX: number
         pixelY: number
+    }
+
+    export interface ScreenSpacePoint {
+        screenX: number
+        screenY: number
+    }
+
+    // Transforms a buffer position (line, column) to a screen space point
+    export type BufferToScreen = (position: types.Position) => ScreenSpacePoint | null
+
+    // Transforms a screen space point into pixel points
+    export type ScreenToPixel = (screenPoint: ScreenSpacePoint) => PixelSpacePoint | null
+}
+
+export namespace Shapes {
+    
+    export interface Rectangle {
+        x: number
+        y: number
+        width: number
+        height: number
+    }
+
+    export namespace Rectangle {
+        export function create(x: number, y: number, width: number, height: number): Rectangle {
+            return {
+                x,
+                y,
+                width,
+                height,
+            }
+        }
     }
 }
 

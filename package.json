@@ -1,6 +1,6 @@
 {
   "name": "oni-api",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "Oni's API layer",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
-      "lib"
+    "lib"
   ],
   "repository": {
     "type": "git",
