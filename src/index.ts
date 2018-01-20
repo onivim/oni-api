@@ -345,6 +345,7 @@ export namespace Plugin {
 
     export interface Api extends EventEmitter {
         automation: Automation.Api
+        colors: IColors
         commands: Commands.Api
         configuration: Configuration
         contextMenu: any /* TODO */
@@ -356,8 +357,7 @@ export namespace Plugin {
         menu: any /* TODO */
         process: Process
         statusBar: StatusBar
-        workspace: Workspace
         windows: IWindowManager
-        colors: IColors
+        workspace: Workspace
     }
 }
