@@ -144,7 +144,7 @@ export interface EditorLayer {
 }
 
 /**
- * EditorLayerRenderContext 
+ * EditorLayerRenderContext
  */
 export interface EditorLayerRenderContext {
     isActive: boolean
@@ -281,7 +281,7 @@ export namespace Coordinates {
 }
 
 export namespace Shapes {
-    
+
     export interface Rectangle {
         x: number
         y: number
