@@ -205,6 +205,15 @@ export interface Buffer {
     setCursorPosition(line: number, column: number): Promise<void>
 }
 
+export interface InactiveBuffer {
+    id: string
+    language: string
+    filePath: string
+    version: number
+    modified: boolean
+    lineCount: number
+}
+
 // Zero-based position of the cursor
 // Note that in Vim, this is a 1-based position
 export interface Cursor {
@@ -315,6 +324,29 @@ export namespace ToolTip {
 }
 
 export namespace Menu {
+    export type filterFunc = (items: Menu.MenuOption[], searchString: string) => IMenuOptionWithHighlights[]
+    export interface MenuInstance {
+        onHide(): IEvent<void>
+        onItemSelected(): IEvent<any>
+        onFilterTextChanged(): IEvent<string>
+        selectedItem(): MenuOption
+        setLoading(isLoading: boolean): void
+        setItems(items: MenuOption[]): void
+        isOpen(): boolean
+        show(): void
+        hide(): void
+        setFilterFunction(filterFn: filterFunc): void
+    }
+
+    export interface Api {
+        create: () => MenuInstance
+        closeActiveMenu: () => void
+        isMenuOpen: () => boolean
+        nextMenuItem: () => void
+        previousMenuItem: () => void
+        selectMenuItem: (index?: number) => Menu.MenuOption
+    }
+
     export interface MenuOption {
         /**
          * Optional font-awesome icon
@@ -323,12 +355,22 @@ export namespace Menu {
 
         label: string
         detail?: string
+        /* Information relevant to the menu item not necessarily intended
+         * for display */
+        metadata?: {
+            [id: string]: string
+        }
 
         /**
          * A pinned option is always shown first in the menu,
          * before unpinned items
          */
         pinned?: boolean
+    }
+
+    export interface IMenuOptionWithHighlights extends Menu.MenuOption {
+        labelHighlights: number[]
+        detailHighlights: number[]
     }
 }
 
@@ -354,7 +396,7 @@ export namespace Plugin {
         input: InputManager
         language: any /* TODO */
         log: any /* TODO */
-        menu: any /* TODO */
+        menu: Menu.Api
         process: Process
         statusBar: StatusBar
         windows: IWindowManager
