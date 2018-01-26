@@ -162,7 +162,7 @@ export interface Editor {
 
     activeBuffer: Buffer
 
-    openFile(file: string): Promise<Buffer>
+    openFile(file: string, method?: string): Promise<Buffer>
 
     onBufferEnter: IEvent<EditorBufferEventArgs>
     onBufferLeave: IEvent<EditorBufferEventArgs>
@@ -326,10 +326,11 @@ export namespace ToolTip {
 export namespace Menu {
     export type filterFunc = (items: Menu.MenuOption[], searchString: string) => IMenuOptionWithHighlights[]
     export interface MenuInstance {
-        onHide(): IEvent<void>
-        onItemSelected(): IEvent<any>
-        onFilterTextChanged(): IEvent<string>
-        selectedItem(): MenuOption
+        onHide: IEvent<void>
+        onItemSelected: IEvent<any>
+        onSelectedItemChanged: IEvent<Menu.MenuOption>
+        onFilterTextChanged: IEvent<string>
+        selectedItem: MenuOption
         setLoading(isLoading: boolean): void
         setItems(items: MenuOption[]): void
         isOpen(): boolean
