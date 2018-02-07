@@ -3,7 +3,7 @@ node_js: 8
 script:
 - npm run build
 deploy:
-  provider: npm
+  - provider: npm
   email: bryphe@outlook.com
   skip_cleanup: true
   api_key:
@@ -11,3 +11,10 @@ deploy:
   on:
     tags: true
     repo: onivim/oni-api
+  - provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+     tags: true
+     branch: master
