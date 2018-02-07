@@ -1,6 +1,6 @@
 {
   "name": "oni-api",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "description": "Oni's API layer",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
