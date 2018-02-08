@@ -13,6 +13,7 @@ deploy:
       repo: onivim/oni-api
   - provider: pages
     skip-cleanup: true
+    local-dir: docs
     github-token:
         secure: er02MBRfBmoOMPUR6aiAh37Ok07i+t63maveLyZDXnjthaSuUXVvKpAjidHQkSbb6SctHeneb3vs85m2P/sKra132uAS2/Ko+Nt3MKMpHIYJpfeGtEBz0KKgh4U92mQV41aVTYvMnkGIbz3k89QRvruSbc3LdHK82AvgiT5r56gKsvm5srZJuWJwOCLCeWMFpD8nMgerpTMXFs2ks6WiuCJdSwrD2QijsYH1RuDo+I4Py36inEMIgOUkxzahcqSWhjSx3hABA03iKPHlO9IHhdtmMu3DiQ3eaqFkWvtU52Qz6EmtdGwrPLCjUCIQB7yGQ6PmpR2HufjCR8mO+t4NjrH10s3TQpFFxJe/qwWD+qr58d0bP2a/RJkhgegXrwKGA/zA1BQZVBkct5t7eaJFdVwKGv37Yms0fF/xJGvnSydw6M4ox2lKWNyJXyhIzDUYp7AorFQWueuwk6qH94BV9C0vhkx7QMuvHQfUDI3Yn0rTYNs3RhooKSVDiA2+s/VPPNMlKH05QE/7n3yPvhNfxpBvowdqSIXch1sD4HFO6S/D4qglygrekX2sryWt7Yoh3JYZGmw8+6D/H3pjD/1x+c8DKHBroKUOudzUciirHNEt6KRJ2/x9eBhN57s8U0+RkKbgBm0CtxaYD1WDhBOnDH3U/TOJUV/a6CgWwKhqWb0=
     keep-history: true
