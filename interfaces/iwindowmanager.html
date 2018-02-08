@@ -79,159 +79,79 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iwindowmanager.html#onunhandledmove" class="tsd-kind-icon">on<wbr>Unhandled<wbr>Move</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iwindowmanager.html#close" class="tsd-kind-icon">close</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iwindowmanager.html#movedown" class="tsd-kind-icon">move<wbr>Down</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iwindowmanager.html#moveleft" class="tsd-kind-icon">move<wbr>Left</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iwindowmanager.html#moveright" class="tsd-kind-icon">move<wbr>Right</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iwindowmanager.html#moveup" class="tsd-kind-icon">move<wbr>Up</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iwindowmanager.html#showdock" class="tsd-kind-icon">show<wbr>Dock</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iwindowmanager.html#split" class="tsd-kind-icon">split</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iwindowmanager.html#createsplit" class="tsd-kind-icon">create<wbr>Split</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iwindowmanager.html#move" class="tsd-kind-icon">move</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="onunhandledmove" class="tsd-anchor"></a>
+					<h3>on<wbr>Unhandled<wbr>Move</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Unhandled<wbr>Move<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IEvent</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#direction" class="tsd-signature-type">Direction</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/f78b42b/src/index.ts#L77">index.ts:77</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="close" class="tsd-anchor"></a>
-					<h3>close</h3>
+					<a name="createsplit" class="tsd-anchor"></a>
+					<h3>create<wbr>Split</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">close<span class="tsd-signature-symbol">(</span>split<span class="tsd-signature-symbol">: </span><a href="iwindowsplit.html" class="tsd-signature-type">IWindowSplit</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Split<span class="tsd-signature-symbol">(</span>direction<span class="tsd-signature-symbol">: </span><a href="../globals.html#direction" class="tsd-signature-type">Direction</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#splitdirection" class="tsd-signature-type">SplitDirection</a>, split<span class="tsd-signature-symbol">: </span><a href="iwindowsplit.html" class="tsd-signature-type">IWindowSplit</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="windowsplithandle.html" class="tsd-signature-type">WindowSplitHandle</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/aac5b4b/src/index.ts#L58">index.ts:58</a></li>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/f78b42b/src/index.ts#L83">index.ts:83</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>split: <a href="iwindowsplit.html" class="tsd-signature-type">IWindowSplit</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="movedown" class="tsd-anchor"></a>
-					<h3>move<wbr>Down</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">move<wbr>Down<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/aac5b4b/src/index.ts#L56">index.ts:56</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="moveleft" class="tsd-anchor"></a>
-					<h3>move<wbr>Left</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">move<wbr>Left<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/aac5b4b/src/index.ts#L54">index.ts:54</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="moveright" class="tsd-anchor"></a>
-					<h3>move<wbr>Right</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">move<wbr>Right<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/aac5b4b/src/index.ts#L55">index.ts:55</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="moveup" class="tsd-anchor"></a>
-					<h3>move<wbr>Up</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">move<wbr>Up<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/aac5b4b/src/index.ts#L57">index.ts:57</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="showdock" class="tsd-anchor"></a>
-					<h3>show<wbr>Dock</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">show<wbr>Dock<span class="tsd-signature-symbol">(</span>direction<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, split<span class="tsd-signature-symbol">: </span><a href="iwindowsplit.html" class="tsd-signature-type">IWindowSplit</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/aac5b4b/src/index.ts#L53">index.ts:53</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>direction: <span class="tsd-signature-type">number</span></h5>
+									<h5>direction: <a href="../globals.html#direction" class="tsd-signature-type">Direction</a><span class="tsd-signature-symbol"> | </span><a href="../globals.html#splitdirection" class="tsd-signature-type">SplitDirection</a></h5>
 								</li>
 								<li>
 									<h5>split: <a href="iwindowsplit.html" class="tsd-signature-type">IWindowSplit</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="windowsplithandle.html" class="tsd-signature-type">WindowSplitHandle</a></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="split" class="tsd-anchor"></a>
-					<h3>split</h3>
+					<a name="move" class="tsd-anchor"></a>
+					<h3>move</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">split<span class="tsd-signature-symbol">(</span>direction<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, split<span class="tsd-signature-symbol">: </span><a href="iwindowsplit.html" class="tsd-signature-type">IWindowSplit</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">move<span class="tsd-signature-symbol">(</span>direction<span class="tsd-signature-symbol">: </span><a href="../globals.html#direction" class="tsd-signature-type">Direction</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/aac5b4b/src/index.ts#L52">index.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/f78b42b/src/index.ts#L86">index.ts:86</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>direction: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>split: <a href="iwindowsplit.html" class="tsd-signature-type">IWindowSplit</a></h5>
+									<h5>direction: <a href="../globals.html#direction" class="tsd-signature-type">Direction</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -291,26 +211,14 @@
 					<li class="current tsd-kind-interface">
 						<a href="iwindowmanager.html" class="tsd-kind-icon">IWindow<wbr>Manager</a>
 						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iwindowmanager.html#close" class="tsd-kind-icon">close</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iwindowmanager.html#onunhandledmove" class="tsd-kind-icon">on<wbr>Unhandled<wbr>Move</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iwindowmanager.html#movedown" class="tsd-kind-icon">move<wbr>Down</a>
+								<a href="iwindowmanager.html#createsplit" class="tsd-kind-icon">create<wbr>Split</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iwindowmanager.html#moveleft" class="tsd-kind-icon">move<wbr>Left</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iwindowmanager.html#moveright" class="tsd-kind-icon">move<wbr>Right</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iwindowmanager.html#moveup" class="tsd-kind-icon">move<wbr>Up</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iwindowmanager.html#showdock" class="tsd-kind-icon">show<wbr>Dock</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iwindowmanager.html#split" class="tsd-kind-icon">split</a>
+								<a href="iwindowmanager.html#move" class="tsd-kind-icon">move</a>
 							</li>
 						</ul>
 					</li>
@@ -341,13 +249,22 @@
 						<a href="statusbaritem.html" class="tsd-kind-icon">Status<wbr>Bar<wbr>Item</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="windowsplithandle.html" class="tsd-kind-icon">Window<wbr>Split<wbr>Handle</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="workspace.html" class="tsd-kind-icon">Workspace</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#configurationvalues" class="tsd-kind-icon">Configuration<wbr>Values</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#direction" class="tsd-kind-icon">Direction</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#disposefunction" class="tsd-kind-icon">Dispose<wbr>Function</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#splitdirection" class="tsd-kind-icon">Split<wbr>Direction</a>
 					</li>
 				</ul>
 			</nav>
