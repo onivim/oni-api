@@ -59,3 +59,6 @@ typings/
 
 # built files
 lib
+
+# docs
+docs
