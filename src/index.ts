@@ -48,14 +48,42 @@ export interface Workspace {
     onDirectoryChanged: IEvent<string>
 }
 
+export type Direction = "left" | "right" | "down" | "up"
+export type SplitDirection = "horizontal" | "vertical"
+
+export interface WindowSplitHandle {
+    id: string
+
+    // Close the split, removing it from the editor surface.
+    close(): void
+
+    // Show makes a split visible
+    show(): void
+
+    // Hide makes a split invisible
+    hide(): void
+
+    // Set focus on a split
+    focus(): void
+
+
+    // Set the size of the split. Dependent on the split orientation.
+    setSize(size: number): void
+}
+
 export interface IWindowManager {
-    split(direction: number, split: IWindowSplit): void
-    showDock(direction: number, split: IWindowSplit): void
-    moveLeft(): void
-    moveRight(): void
-    moveDown(): void
-    moveUp(): void
-    close(split: IWindowSplit): void
+    // onUnhandledMove is dispatched when a move isn't handled. This can occur
+    // at the boundaries, when there is no further split
+    onUnhandledMove: IEvent<Direction>
+
+    // Create a split on the editor surface
+    // If direction is 'left', 'right', 'down', or 'up', the split
+    // will be created in a dock. Otherwise, it will be in the primary
+    // editor surface.
+    createSplit(direction: Direction | SplitDirection, split: IWindowSplit): WindowSplitHandle
+
+    // Moves from the currently focused split to another focused split
+    move(direction: Direction): void
 }
 
 export interface IWindowSplit {
