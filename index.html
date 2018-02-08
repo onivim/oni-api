@@ -64,10 +64,18 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<p><a href="https://travis-ci.org/onivim/oni-api"><img src="https://travis-ci.org/onivim/oni-api.svg?branch=master" alt="Build Status"></a>
-				<a href="https://badge.fury.io/js/oni-api"><img src="https://badge.fury.io/js/oni-api.svg" alt="npm version"></a></p>
-				<h1 id="oni-api">oni-api</h1>
-				<p>Oni&#39;s extensibility model API</p>
+				<h1 id="oni-api">Oni API</h1>
+				<p>This documents the surface area of Oni&#39;s API, which is available to both <em>plugins</em> and <em>configuration</em>.</p>
+				<p>A good starting point is the <a href="interfaces/plugin.api.html">Plugin API</a>, which is the object passed into the <code>activate</code> methods.</p>
+				<p>An example <code>config.js</code> using the API object is:</p>
+				<pre><code>const activate = (oni) =&gt; {
+    // The passed in `oni` object is an<span class="hljs-built_in"> instance </span>of the Plugin API
+}
+
+module.exports = {
+    activate,
+}
+</code></pre><p>Likewise, for a plugin, the entry point is an <code>activate</code> method with a <a href="interfaces/plugin.api.html">Plugin API</a> object passed in.</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
