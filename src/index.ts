@@ -102,6 +102,11 @@ export interface InputManager {
     unbindAll(): void
 }
 
+export interface IPluginManager {
+    getPlugin(name: string): any
+    loaded: boolean
+}
+
 /**
  * Automation API definition
  *
@@ -425,6 +430,7 @@ export namespace Plugin {
         input: InputManager
         language: any /* TODO */
         log: any /* TODO */
+        plugins: IPluginManager
         menu: Menu.Api
         process: Process
         statusBar: StatusBar
