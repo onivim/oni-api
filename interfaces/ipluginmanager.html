@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PixelSpacePoint | oni-api</title>
+	<title>IPluginManager | oni-api</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/coordinates.html">Coordinates</a>
-				</li>
-				<li>
-					<a href="coordinates.pixelspacepoint.html">PixelSpacePoint</a>
+					<a href="ipluginmanager.html">IPluginManager</a>
 				</li>
 			</ul>
-			<h1>Interface PixelSpacePoint</h1>
+			<h1>Interface IPluginManager</h1>
 		</div>
 	</div>
 </header>
@@ -73,7 +70,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">PixelSpacePoint</span>
+						<span class="target">IPluginManager</span>
 					</li>
 				</ul>
 			</section>
@@ -84,8 +81,13 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="coordinates.pixelspacepoint.html#pixelx" class="tsd-kind-icon">pixelX</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="coordinates.pixelspacepoint.html#pixely" class="tsd-kind-icon">pixelY</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ipluginmanager.html#loaded" class="tsd-kind-icon">loaded</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ipluginmanager.html#getplugin" class="tsd-kind-icon">get<wbr>Plugin</a></li>
 							</ul>
 						</section>
 					</div>
@@ -94,24 +96,40 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="pixelx" class="tsd-anchor"></a>
-					<h3>pixelX</h3>
-					<div class="tsd-signature tsd-kind-icon">pixelX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="loaded" class="tsd-anchor"></a>
+					<h3>loaded</h3>
+					<div class="tsd-signature tsd-kind-icon">loaded<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/d9bddea/src/index.ts#L309">index.ts:309</a></li>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/d9bddea/src/index.ts#L107">index.ts:107</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="pixely" class="tsd-anchor"></a>
-					<h3>pixelY</h3>
-					<div class="tsd-signature tsd-kind-icon">pixelY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/d9bddea/src/index.ts#L310">index.ts:310</a></li>
-						</ul>
-					</aside>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getplugin" class="tsd-anchor"></a>
+					<h3>get<wbr>Plugin</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Plugin<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/d9bddea/src/index.ts#L106">index.ts:106</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -121,57 +139,105 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/automation.html">Automation</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/commands.html">Commands</a>
-					</li>
-					<li class="current tsd-kind-module">
-						<a href="../modules/coordinates.html">Coordinates</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/menu.html">Menu</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/plugin.html">Plugin</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/shapes.html">Shapes</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/tooltip.html">Tool<wbr>Tip</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/vim.html">Vim</a>
-					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-interface">
+						<a href="buffer.html" class="tsd-kind-icon">Buffer</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="configuration.html" class="tsd-kind-icon">Configuration</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="cursor.html" class="tsd-kind-icon">Cursor</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="editor.html" class="tsd-kind-icon">Editor</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="editorbufferchangedeventargs.html" class="tsd-kind-icon">Editor<wbr>Buffer<wbr>Changed<wbr>Event<wbr>Args</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="editorbuffereventargs.html" class="tsd-kind-icon">Editor<wbr>Buffer<wbr>Event<wbr>Args</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="editorbufferscrolledeventargs.html" class="tsd-kind-icon">Editor<wbr>Buffer<wbr>Scrolled<wbr>Event<wbr>Args</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="editorlayer.html" class="tsd-kind-icon">Editor<wbr>Layer</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="editorlayerrendercontext.html" class="tsd-kind-icon">Editor<wbr>Layer<wbr>Render<wbr>Context</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="editormanager.html" class="tsd-kind-icon">Editor<wbr>Manager</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="icolors.html" class="tsd-kind-icon">IColors</a>
+					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="coordinates.pixelspacepoint.html" class="tsd-kind-icon">Pixel<wbr>Space<wbr>Point</a>
+					<li class="current tsd-kind-interface">
+						<a href="ipluginmanager.html" class="tsd-kind-icon">IPlugin<wbr>Manager</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="coordinates.pixelspacepoint.html#pixelx" class="tsd-kind-icon">pixelX</a>
+								<a href="ipluginmanager.html#loaded" class="tsd-kind-icon">loaded</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="coordinates.pixelspacepoint.html#pixely" class="tsd-kind-icon">pixelY</a>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="ipluginmanager.html#getplugin" class="tsd-kind-icon">get<wbr>Plugin</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="coordinates.screenspacepoint.html" class="tsd-kind-icon">Screen<wbr>Space<wbr>Point</a>
+					<li class=" tsd-kind-interface">
+						<a href="itoken.html" class="tsd-kind-icon">IToken</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="../modules/coordinates.html#buffertoscreen" class="tsd-kind-icon">Buffer<wbr>ToScreen</a>
+					<li class=" tsd-kind-interface">
+						<a href="iwindowmanager.html" class="tsd-kind-icon">IWindow<wbr>Manager</a>
 					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="../modules/coordinates.html#screentopixel" class="tsd-kind-icon">Screen<wbr>ToPixel</a>
+					<li class=" tsd-kind-interface">
+						<a href="iwindowsplit.html" class="tsd-kind-icon">IWindow<wbr>Split</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="inactivebuffer.html" class="tsd-kind-icon">Inactive<wbr>Buffer</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="inputmanager.html" class="tsd-kind-icon">Input<wbr>Manager</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="log.html" class="tsd-kind-icon">Log</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="neovimeditorcapability.html" class="tsd-kind-icon">Neovim<wbr>Editor<wbr>Capability</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="process.html" class="tsd-kind-icon">Process</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="statusbar.html" class="tsd-kind-icon">Status<wbr>Bar</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="statusbaritem.html" class="tsd-kind-icon">Status<wbr>Bar<wbr>Item</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="windowsplithandle.html" class="tsd-kind-icon">Window<wbr>Split<wbr>Handle</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="workspace.html" class="tsd-kind-icon">Workspace</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#configurationvalues" class="tsd-kind-icon">Configuration<wbr>Values</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#direction" class="tsd-kind-icon">Direction</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#disposefunction" class="tsd-kind-icon">Dispose<wbr>Function</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#splitdirection" class="tsd-kind-icon">Split<wbr>Direction</a>
 					</li>
 				</ul>
 			</nav>
