@@ -83,6 +83,8 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="editormanager.html#activeeditor" class="tsd-kind-icon">active<wbr>Editor</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="editormanager.html#alleditors" class="tsd-kind-icon">all<wbr>Editors</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="editormanager.html#anyeditor" class="tsd-kind-icon">any<wbr>Editor</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="editormanager.html#onactiveeditorchanged" class="tsd-kind-icon">on<wbr>Active<wbr>Editor<wbr>Changed</a></li>
 							</ul>
 						</section>
 					</div>
@@ -96,19 +98,62 @@
 					<div class="tsd-signature tsd-kind-icon">active<wbr>Editor<span class="tsd-signature-symbol">:</span> <a href="editor.html" class="tsd-signature-type">Editor</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/d9bddea/src/index.ts#L95">index.ts:95</a></li>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/f4ea629/src/index.ts#L110">index.ts:110</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The currently active <code>Editor</code> instance</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="alleditors" class="tsd-anchor"></a>
 					<h3>all<wbr>Editors</h3>
-					<div class="tsd-signature tsd-kind-icon">all<wbr>Editors<span class="tsd-signature-symbol">:</span> <a href="editor.html" class="tsd-signature-type">Editor</a></div>
+					<div class="tsd-signature tsd-kind-icon">all<wbr>Editors<span class="tsd-signature-symbol">:</span> <a href="editor.html" class="tsd-signature-type">Editor</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/d9bddea/src/index.ts#L94">index.ts:94</a></li>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/f4ea629/src/index.ts#L98">index.ts:98</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An array of all available <code>Editor</code> instances</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="anyeditor" class="tsd-anchor"></a>
+					<h3>any<wbr>Editor</h3>
+					<div class="tsd-signature tsd-kind-icon">any<wbr>Editor<span class="tsd-signature-symbol">:</span> <a href="editor.html" class="tsd-signature-type">Editor</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/f4ea629/src/index.ts#L105">index.ts:105</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A proxy that <em>always</em> points to the active <code>Editor</code>. This means
+								you can avoid always needing to hook/unhook events when the
+							active <code>Editor</code> changes by hooking events on <code>anyEditor</code></p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="onactiveeditorchanged" class="tsd-anchor"></a>
+					<h3>on<wbr>Active<wbr>Editor<wbr>Changed</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Active<wbr>Editor<wbr>Changed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IEvent</span><span class="tsd-signature-symbol">&lt;</span><a href="editor.html" class="tsd-signature-type">Editor</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/f4ea629/src/index.ts#L116">index.ts:116</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Event that is dispatched when the active <code>Editor</code> changes,
+							for example, when focus moves from one <code>Editor</code> to another.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -159,6 +204,12 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="editormanager.html#alleditors" class="tsd-kind-icon">all<wbr>Editors</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="editormanager.html#anyeditor" class="tsd-kind-icon">any<wbr>Editor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="editormanager.html#onactiveeditorchanged" class="tsd-kind-icon">on<wbr>Active<wbr>Editor<wbr>Changed</a>
 							</li>
 						</ul>
 					</li>
