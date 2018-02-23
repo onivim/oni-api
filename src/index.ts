@@ -91,8 +91,29 @@ export interface IWindowSplit {
 }
 
 export interface EditorManager {
-    allEditors: Editor
+
+    /**
+     * An array of all available `Editor` instances
+     */
+    allEditors: Editor[]
+
+    /**
+     * A proxy that _always_ points to the active `Editor`. This means
+     * you can avoid always needing to hook/unhook events when the
+     * active `Editor` changes by hooking events on `anyEditor`
+     */
+    anyEditor: Editor
+
+    /**
+     * The currently active `Editor` instance
+     */
     activeEditor: Editor
+
+    /**
+     * Event that is dispatched when the active `Editor` changes,
+     * for example, when focus moves from one `Editor` to another.
+     */
+    onActiveEditorChanged: IEvent<Editor>
 }
 
 export interface InputManager {
