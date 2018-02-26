@@ -222,11 +222,26 @@ export interface BufferLayerRenderContext {
     dimensions: Shapes.Rectangle
 }
 
+export type InputCallbackFunction = (input: string) => Promise<void>
+
 export interface Editor {
     mode: string
-    onModeChanged: IEvent<Vim.Mode>
 
     activeBuffer: Buffer
+
+    /**
+     * Helper function to queue / block input while a long-running process
+     * is occurring.
+     *
+     * This is important for API calls that may require multiple steps while
+     * the user is typing, for example, auto-closing pairs or snippets.
+     *
+     * This takes a function that returns a promise, as well as an input
+     * argument so that input can be entered exclusively by the block.
+     *
+     * Use sparingly as this may cause a visible delay in typing.
+     */
+    blockInput(atomicInputFunction: (inputCallback: InputCallbackFunction) => Promise<void>): void
 
     openFile(file: string, method?: string): Promise<Buffer>
 
@@ -235,6 +250,8 @@ export interface Editor {
     onBufferChanged: IEvent<EditorBufferChangedEventArgs>
     onBufferScrolled: IEvent<EditorBufferScrolledEventArgs>
     onBufferSaved: IEvent<EditorBufferEventArgs>
+    onCursorMoved: IEvent<Cursor>
+    onModeChanged: IEvent<Vim.Mode>
 
     // Optional capabilities for the editor to implement
     neovim?: NeovimEditorCapability
