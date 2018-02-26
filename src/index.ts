@@ -289,6 +289,41 @@ export interface Log {
     enableVerboseLogging(): void
 }
 
+/**
+ * The `recorder` API enables the taking of screenshot or recording a video.
+ *
+ * The output defaults to the `os.tmpdir()` directory, but can be overridden
+ * by the `recorder.outputPath` option.
+ */
+export interface Recorder {
+
+   /**
+    * Returns `true` if a recording is in progress, `false` otherwise
+    */
+   isRecording: boolean 
+
+   /**
+    * Start recording a video.
+    *
+    * Videos are recorded in `.webm` format.
+    */
+    startRecording(): void
+
+    /**
+     * Stop recording a video. 
+     *
+     * Optionally specify the destination `fileName`.
+     */
+    stopRecording(fileName?: string): Promise<void>
+
+    /**
+     * Take a screenshot.
+     *
+     * Optionally specify the destination `fileName.
+     */
+    takeScreenshot(fileName?: string): void
+}
+
 export interface StatusBar {
     getItem(globalId?: string): StatusBarItem
     createItem(alignment: number, globalId?: string): StatusBarItem
@@ -454,6 +489,7 @@ export namespace Plugin {
         plugins: IPluginManager
         menu: Menu.Api
         process: Process
+        recorder: Recorder
         statusBar: StatusBar
         windows: IWindowManager
         workspace: Workspace
