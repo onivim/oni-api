@@ -172,13 +172,13 @@ export interface NeovimEditorCapability {
 }
 
 /**
- * An EditorLayer is a UI overlay presented over a buffer.
+ * A BufferLayer is a UI overlay presented over a buffer.
  *
  * This allows for all manners of custom rendering - whether it is simply
  * overlaying tokens or showing adorners, or completely overriding the
  * rendering layer of the buffer.
  */
-export interface EditorLayer {
+export interface BufferLayer {
 
     /**
      * Unique id for the buffer layer. This must be globally unique and is used to reference the layer.
@@ -194,19 +194,31 @@ export interface EditorLayer {
      * `render` returns a custom UI element. Note that this may be called multiple times per buffer,
      * if there are multiple windows with the same buffer.
      */
-    render(context: EditorLayerRenderContext): JSX.Element
+    render(context: BufferLayerRenderContext): JSX.Element
 }
 
 /**
- * EditorLayerRenderContext
+ * BufferLayerRenderContext
  */
-export interface EditorLayerRenderContext {
+export interface BufferLayerRenderContext {
     isActive: boolean
 
     windowId: number
 
+    /**
+     * Function that takes a _buffer_ position (line, character) and converts it to a
+     * _screen cell_ position.
+     */
     bufferToScreen: Coordinates.BufferToScreen
+
+    /**
+     * Function that takes a _screen cell_ position and converts it to a _pixel_ position.
+     */
     screenToPixel: Coordinates.ScreenToPixel
+
+    /**
+     * Dimensions of the buffer window, in cells.
+     */
     dimensions: Shapes.Rectangle
 }
 
@@ -249,7 +261,9 @@ export interface Buffer {
 
     lineCount: number
 
-    addLayer(layer: EditorLayer): void
+    addLayer(layer: BufferLayer): void
+    removeLayer(layer: BufferLayer): void
+
     applyTextEdits(edit: types.TextEdit | types.TextEdit[]): Promise<void>
     getLines(start?: number, end?: number): Promise<string[]>
     getTokenAt(line: number, column: number): Promise<IToken>
