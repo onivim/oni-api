@@ -67,7 +67,18 @@
 				<h1 id="oni-api">Oni API</h1>
 				<p>This documents the surface area of Oni&#39;s API, which is available to both <em>plugins</em> and <em>configuration</em>.</p>
 				<p>A good starting point is the <a href="interfaces/plugin.api.html">Plugin API</a>, which is the object passed into the <code>activate</code> methods.</p>
-				<p>An example <code>config.js</code> using the API object is:</p>
+				<p>The <a href="interfaces/plugin.api.html">Plugin API</a> is available in a few places:</p>
+				<h3 id="developer-tools">Developer Tools</h3>
+				<p>There is a global <code>Oni</code> object available in the developer tools:</p>
+				<ul>
+					<li>Open the command palette and execute <code>Open Devtools</code></li>
+					<li>Go to the <code>Console</code> tab</li>
+					<li>Start executing against the <code>Oni</code> object</li>
+				</ul>
+				<p><img src="./../images/devtools-example.png" alt="example"></p>
+				<p>This is great for quick debugging or exploring the API surface area.</p>
+				<h3 id="user-configuration">User Configuration</h3>
+				<p>An <code>Oni</code> API object is passed to the <code>activate</code> method of your config. An example <code>config.js</code> using the API object is:</p>
 				<pre><code>const activate = (oni) =&gt; {
     // The passed in `oni` object is an<span class="hljs-built_in"> instance </span>of the Plugin API
 }
@@ -75,7 +86,8 @@
 module.exports = {
     activate,
 }
-</code></pre><p>Likewise, for a plugin, the entry point is an <code>activate</code> method with a <a href="interfaces/plugin.api.html">Plugin API</a> object passed in.</p>
+</code></pre><h3 id="plugins">Plugins</h3>
+				<p>Like the user configuration, for plugins, the entry point is an <code>activate</code> method with an Oni object passed in.</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -116,6 +128,12 @@ module.exports = {
 						<a href="interfaces/buffer.html" class="tsd-kind-icon">Buffer</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/bufferlayer.html" class="tsd-kind-icon">Buffer<wbr>Layer</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/bufferlayerrendercontext.html" class="tsd-kind-icon">Buffer<wbr>Layer<wbr>Render<wbr>Context</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/configuration.html" class="tsd-kind-icon">Configuration</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -132,12 +150,6 @@ module.exports = {
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/editorbufferscrolledeventargs.html" class="tsd-kind-icon">Editor<wbr>Buffer<wbr>Scrolled<wbr>Event<wbr>Args</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/editorlayer.html" class="tsd-kind-icon">Editor<wbr>Layer</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/editorlayerrendercontext.html" class="tsd-kind-icon">Editor<wbr>Layer<wbr>Render<wbr>Context</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/editormanager.html" class="tsd-kind-icon">Editor<wbr>Manager</a>
@@ -171,6 +183,9 @@ module.exports = {
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/process.html" class="tsd-kind-icon">Process</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/recorder.html" class="tsd-kind-icon">Recorder</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/statusbar.html" class="tsd-kind-icon">Status<wbr>Bar</a>

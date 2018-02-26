@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>EditorLayerRenderContext | oni-api</title>
+	<title>Recorder | oni-api</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="editorlayerrendercontext.html">EditorLayerRenderContext</a>
+					<a href="recorder.html">Recorder</a>
 				</li>
 			</ul>
-			<h1>Interface EditorLayerRenderContext</h1>
+			<h1>Interface Recorder</h1>
 		</div>
 	</div>
 </header>
@@ -69,15 +69,17 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>EditorLayerRenderContext</p>
+						<p>The <code>recorder</code> API enables the taking of screenshot or recording a video.</p>
 					</div>
+					<p>The output defaults to the <code>os.tmpdir()</code> directory, but can be overridden
+					by the <code>recorder.outputPath</code> option.</p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">EditorLayerRenderContext</span>
+						<span class="target">Recorder</span>
 					</li>
 				</ul>
 			</section>
@@ -88,11 +90,15 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="editorlayerrendercontext.html#buffertoscreen" class="tsd-kind-icon">buffer<wbr>ToScreen</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="editorlayerrendercontext.html#dimensions" class="tsd-kind-icon">dimensions</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="editorlayerrendercontext.html#isactive" class="tsd-kind-icon">is<wbr>Active</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="editorlayerrendercontext.html#screentopixel" class="tsd-kind-icon">screen<wbr>ToPixel</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="editorlayerrendercontext.html#windowid" class="tsd-kind-icon">window<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="recorder.html#isrecording" class="tsd-kind-icon">is<wbr>Recording</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="recorder.html#startrecording" class="tsd-kind-icon">start<wbr>Recording</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="recorder.html#stoprecording" class="tsd-kind-icon">stop<wbr>Recording</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="recorder.html#takescreenshot" class="tsd-kind-icon">take<wbr>Screenshot</a></li>
 							</ul>
 						</section>
 					</div>
@@ -101,54 +107,103 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="buffertoscreen" class="tsd-anchor"></a>
-					<h3>buffer<wbr>ToScreen</h3>
-					<div class="tsd-signature tsd-kind-icon">buffer<wbr>ToScreen<span class="tsd-signature-symbol">:</span> <a href="../modules/coordinates.html#buffertoscreen" class="tsd-signature-type">BufferToScreen</a></div>
+					<a name="isrecording" class="tsd-anchor"></a>
+					<h3>is<wbr>Recording</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Recording<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/f4ea629/src/index.ts#L208">index.ts:208</a></li>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/db51bef/src/index.ts#L317">index.ts:317</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Returns <code>true</code> if a recording is in progress, <code>false</code> otherwise</p>
+						</div>
+					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="dimensions" class="tsd-anchor"></a>
-					<h3>dimensions</h3>
-					<div class="tsd-signature tsd-kind-icon">dimensions<span class="tsd-signature-symbol">:</span> <a href="../modules/shapes.rectangle.html" class="tsd-signature-type">Rectangle</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/f4ea629/src/index.ts#L210">index.ts:210</a></li>
-						</ul>
-					</aside>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="startrecording" class="tsd-anchor"></a>
+					<h3>start<wbr>Recording</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">start<wbr>Recording<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/db51bef/src/index.ts#L324">index.ts:324</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Start recording a video.</p>
+								</div>
+								<p>Videos are recorded in <code>.webm</code> format.</p>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="isactive" class="tsd-anchor"></a>
-					<h3>is<wbr>Active</h3>
-					<div class="tsd-signature tsd-kind-icon">is<wbr>Active<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/f4ea629/src/index.ts#L204">index.ts:204</a></li>
-						</ul>
-					</aside>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="stoprecording" class="tsd-anchor"></a>
+					<h3>stop<wbr>Recording</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">stop<wbr>Recording<span class="tsd-signature-symbol">(</span>fileName<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/db51bef/src/index.ts#L331">index.ts:331</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Stop recording a video.</p>
+								</div>
+								<p>Optionally specify the destination <code>fileName</code>.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fileName: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="screentopixel" class="tsd-anchor"></a>
-					<h3>screen<wbr>ToPixel</h3>
-					<div class="tsd-signature tsd-kind-icon">screen<wbr>ToPixel<span class="tsd-signature-symbol">:</span> <a href="../modules/coordinates.html#screentopixel" class="tsd-signature-type">ScreenToPixel</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/f4ea629/src/index.ts#L209">index.ts:209</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="windowid" class="tsd-anchor"></a>
-					<h3>window<wbr>Id</h3>
-					<div class="tsd-signature tsd-kind-icon">window<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/f4ea629/src/index.ts#L206">index.ts:206</a></li>
-						</ul>
-					</aside>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="takescreenshot" class="tsd-anchor"></a>
+					<h3>take<wbr>Screenshot</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">take<wbr>Screenshot<span class="tsd-signature-symbol">(</span>fileName<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/db51bef/src/index.ts#L338">index.ts:338</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Take a screenshot.</p>
+								</div>
+								<p>Optionally specify the destination `fileName.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fileName: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -164,6 +219,12 @@
 				<ul class="before-current">
 					<li class=" tsd-kind-interface">
 						<a href="buffer.html" class="tsd-kind-icon">Buffer</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="bufferlayer.html" class="tsd-kind-icon">Buffer<wbr>Layer</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="bufferlayerrendercontext.html" class="tsd-kind-icon">Buffer<wbr>Layer<wbr>Render<wbr>Context</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="configuration.html" class="tsd-kind-icon">Configuration</a>
@@ -183,33 +244,6 @@
 					<li class=" tsd-kind-interface">
 						<a href="editorbufferscrolledeventargs.html" class="tsd-kind-icon">Editor<wbr>Buffer<wbr>Scrolled<wbr>Event<wbr>Args</a>
 					</li>
-					<li class=" tsd-kind-interface">
-						<a href="editorlayer.html" class="tsd-kind-icon">Editor<wbr>Layer</a>
-					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface">
-						<a href="editorlayerrendercontext.html" class="tsd-kind-icon">Editor<wbr>Layer<wbr>Render<wbr>Context</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="editorlayerrendercontext.html#buffertoscreen" class="tsd-kind-icon">buffer<wbr>ToScreen</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="editorlayerrendercontext.html#dimensions" class="tsd-kind-icon">dimensions</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="editorlayerrendercontext.html#isactive" class="tsd-kind-icon">is<wbr>Active</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="editorlayerrendercontext.html#screentopixel" class="tsd-kind-icon">screen<wbr>ToPixel</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="editorlayerrendercontext.html#windowid" class="tsd-kind-icon">window<wbr>Id</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-interface">
 						<a href="editormanager.html" class="tsd-kind-icon">Editor<wbr>Manager</a>
 					</li>
@@ -243,6 +277,27 @@
 					<li class=" tsd-kind-interface">
 						<a href="process.html" class="tsd-kind-icon">Process</a>
 					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
+						<a href="recorder.html" class="tsd-kind-icon">Recorder</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="recorder.html#isrecording" class="tsd-kind-icon">is<wbr>Recording</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="recorder.html#startrecording" class="tsd-kind-icon">start<wbr>Recording</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="recorder.html#stoprecording" class="tsd-kind-icon">stop<wbr>Recording</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="recorder.html#takescreenshot" class="tsd-kind-icon">take<wbr>Screenshot</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface">
 						<a href="statusbar.html" class="tsd-kind-icon">Status<wbr>Bar</a>
 					</li>
