@@ -90,6 +90,29 @@ export interface IWindowSplit {
     render(): JSX.Element
 }
 
+export enum FileOpenMode {
+    // Open file in existing editor / tab, if it is already open.
+    // Otherwise, open in a new tab in the active editor.
+    Edit = 0,
+
+    // Open file in a new vertical split
+    VerticalSplit,
+
+    // Open file in a new horizontal split
+    HorizontalSplit,
+
+    // Open file in a new tab, in the active editor
+    NewTab,
+}
+
+export interface FileOpenOptions {
+    openMode: FileOpenMode
+}
+
+export const DefaultFileOpenOptions: FileOpenOptions = {
+    openMode: FileOpenMode.Edit
+}
+
 export interface EditorManager {
 
     /**
@@ -114,6 +137,8 @@ export interface EditorManager {
      * for example, when focus moves from one `Editor` to another.
      */
     onActiveEditorChanged: IEvent<Editor>
+
+    openFile(filePath: string, options?: FileOpenOptions): Promise<Buffer>
 }
 
 export interface InputManager {
@@ -243,7 +268,9 @@ export interface Editor {
      */
     blockInput(atomicInputFunction: (inputCallback: InputCallbackFunction) => Promise<void>): void
 
-    openFile(file: string, method?: string): Promise<Buffer>
+    openFile(file: string, openOptions?: FileOpenOptions): Promise<Buffer>
+
+    getBuffers(): Array<Buffer | InactiveBuffer>
 
     onBufferEnter: IEvent<EditorBufferEventArgs>
     onBufferLeave: IEvent<EditorBufferEventArgs>
