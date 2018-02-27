@@ -103,6 +103,10 @@ export enum FileOpenMode {
 
     // Open file in a new tab, in the active editor
     NewTab,
+
+    // Open file in existing tab. Replaces the currently
+    // active file in the tab.
+    ExistingTab,
 }
 
 export interface FileOpenOptions {
