@@ -270,6 +270,8 @@ export interface Editor {
 
     openFile(file: string, openOptions?: FileOpenOptions): Promise<Buffer>
 
+    getBuffers(): Array<Buffer | InactiveBuffer>
+
     onBufferEnter: IEvent<EditorBufferEventArgs>
     onBufferLeave: IEvent<EditorBufferEventArgs>
     onBufferChanged: IEvent<EditorBufferChangedEventArgs>
