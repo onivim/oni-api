@@ -44,6 +44,31 @@ export interface Configuration {
     setValues(configurationValues: ConfigurationValues): void
 }
 
+export namespace Preview {
+
+    export interface PreviewContext {
+        sourceBuffer: Buffer
+
+        mappedFilePath: string
+
+        previewFileContents: string
+    }
+
+    export type PreviewOptions = { [key: string]: any }
+
+    export interface Previewer {
+        render(context: PreviewContext): JSX.Element
+    }
+    
+    export interface Api {
+        registerPreviewer(identifier: string, previewer: Previewer): void
+
+        registerDefaultPreviewerForLanguage(language: string, previewIdentifier: string, options?: PreviewOptions): void
+        
+        openPreview(openMode: FileOpenMode): Promise<void>
+    }
+}
+
 export interface Workspace {
     onDirectoryChanged: IEvent<string>
 }
