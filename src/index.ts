@@ -8,6 +8,38 @@ import { Event, IEvent } from "oni-types"
 export type DisposeFunction = () => void
 
 /**
+ * API surface area for our Achievements integration
+ */
+export namespace Achievements {
+
+    /**
+     * Definition of an achievement
+     *
+     * An achievement consists of a name, title, along with one or more sub goals
+     */
+    export interface AchievementDefinition {
+        uniqueId: string
+        name: string
+        description: string
+
+        goals: AchievementGoalDefinition[]
+    }
+
+    export interface AchievementGoalDefinition {
+        name: string
+        goalId: string
+        count: number
+    }
+    
+    export interface Api {
+        notifyGoal(goalId: string): void 
+        registerAchievement(definition: AchievementDefinition): void
+
+        onAchievementAccomplished: IEvent<AchievementDefinition>
+    }
+}
+
+/**
  * API surface area for registering and executing commands
  */
 export namespace Commands {
@@ -574,6 +606,7 @@ export namespace Plugin {
     }
 
     export interface Api extends EventEmitter {
+        achievements: Achievements.Api
         automation: Automation.Api
         colors: IColors
         commands: Commands.Api
