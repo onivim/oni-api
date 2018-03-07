@@ -588,6 +588,7 @@ export namespace Plugin {
         menu: Menu.Api
         process: Process
         recorder: Recorder
+        snippets: Snippets.SnippetManager
         statusBar: StatusBar
         windows: IWindowManager
         workspace: Workspace
