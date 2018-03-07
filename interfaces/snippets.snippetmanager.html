@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>MenuInstance | oni-api</title>
+	<title>SnippetManager | oni-api</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,24 +56,31 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/menu.html">Menu</a>
+					<a href="../modules/snippets.html">Snippets</a>
 				</li>
 				<li>
-					<a href="menu.menuinstance.html">MenuInstance</a>
+					<a href="snippets.snippetmanager.html">SnippetManager</a>
 				</li>
 			</ul>
-			<h1>Interface MenuInstance</h1>
+			<h1>Interface SnippetManager</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p><code>SnippetManager</code> is the main entry point for integrating with snippets.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">MenuInstance</span>
+						<span class="target">SnippetManager</span>
 					</li>
 				</ul>
 			</section>
@@ -84,22 +91,18 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="menu.menuinstance.html#onfiltertextchanged" class="tsd-kind-icon">on<wbr>Filter<wbr>Text<wbr>Changed</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="menu.menuinstance.html#onhide" class="tsd-kind-icon">on<wbr>Hide</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="menu.menuinstance.html#onitemselected" class="tsd-kind-icon">on<wbr>Item<wbr>Selected</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="menu.menuinstance.html#onselecteditemchanged" class="tsd-kind-icon">on<wbr>Selected<wbr>Item<wbr>Changed</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="menu.menuinstance.html#selecteditem" class="tsd-kind-icon">selected<wbr>Item</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="snippets.snippetmanager.html#issnippetactive" class="tsd-kind-icon">is<wbr>Snippet<wbr>Active</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="menu.menuinstance.html#hide" class="tsd-kind-icon">hide</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="menu.menuinstance.html#isopen" class="tsd-kind-icon">is<wbr>Open</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="menu.menuinstance.html#setfilterfunction" class="tsd-kind-icon">set<wbr>Filter<wbr>Function</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="menu.menuinstance.html#setitems" class="tsd-kind-icon">set<wbr>Items</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="menu.menuinstance.html#setloading" class="tsd-kind-icon">set<wbr>Loading</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="menu.menuinstance.html#show" class="tsd-kind-icon">show</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="snippets.snippetmanager.html#cancel" class="tsd-kind-icon">cancel</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="snippets.snippetmanager.html#getsnippetsforlanguage" class="tsd-kind-icon">get<wbr>Snippets<wbr>For<wbr>Language</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="snippets.snippetmanager.html#insertsnippet" class="tsd-kind-icon">insert<wbr>Snippet</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="snippets.snippetmanager.html#nextplaceholder" class="tsd-kind-icon">next<wbr>Placeholder</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="snippets.snippetmanager.html#previousplaceholder" class="tsd-kind-icon">previous<wbr>Placeholder</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="snippets.snippetmanager.html#registersnippetprovider" class="tsd-kind-icon">register<wbr>Snippet<wbr>Provider</a></li>
 							</ul>
 						</section>
 					</div>
@@ -108,52 +111,12 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="onfiltertextchanged" class="tsd-anchor"></a>
-					<h3>on<wbr>Filter<wbr>Text<wbr>Changed</h3>
-					<div class="tsd-signature tsd-kind-icon">on<wbr>Filter<wbr>Text<wbr>Changed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IEvent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<a name="issnippetactive" class="tsd-anchor"></a>
+					<h3>is<wbr>Snippet<wbr>Active</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Snippet<wbr>Active<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/90bc638/src/index.ts#L519">index.ts:519</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="onhide" class="tsd-anchor"></a>
-					<h3>on<wbr>Hide</h3>
-					<div class="tsd-signature tsd-kind-icon">on<wbr>Hide<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IEvent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/90bc638/src/index.ts#L516">index.ts:516</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="onitemselected" class="tsd-anchor"></a>
-					<h3>on<wbr>Item<wbr>Selected</h3>
-					<div class="tsd-signature tsd-kind-icon">on<wbr>Item<wbr>Selected<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IEvent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/90bc638/src/index.ts#L517">index.ts:517</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="onselecteditemchanged" class="tsd-anchor"></a>
-					<h3>on<wbr>Selected<wbr>Item<wbr>Changed</h3>
-					<div class="tsd-signature tsd-kind-icon">on<wbr>Selected<wbr>Item<wbr>Changed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IEvent</span><span class="tsd-signature-symbol">&lt;</span><a href="menu.menuoption.html" class="tsd-signature-type">MenuOption</a><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/90bc638/src/index.ts#L518">index.ts:518</a></li>
-						</ul>
-					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="selecteditem" class="tsd-anchor"></a>
-					<h3>selected<wbr>Item</h3>
-					<div class="tsd-signature tsd-kind-icon">selected<wbr>Item<span class="tsd-signature-symbol">:</span> <a href="menu.menuoption.html" class="tsd-signature-type">MenuOption</a></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/90bc638/src/index.ts#L520">index.ts:520</a></li>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/90bc638/src/index.ts#L74">index.ts:74</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -161,121 +124,121 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="hide" class="tsd-anchor"></a>
-					<h3>hide</h3>
+					<a name="cancel" class="tsd-anchor"></a>
+					<h3>cancel</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">hide<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">cancel<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/90bc638/src/index.ts#L525">index.ts:525</a></li>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/90bc638/src/index.ts#L78">index.ts:78</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="isopen" class="tsd-anchor"></a>
-					<h3>is<wbr>Open</h3>
+					<a name="getsnippetsforlanguage" class="tsd-anchor"></a>
+					<h3>get<wbr>Snippets<wbr>For<wbr>Language</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Open<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Snippets<wbr>For<wbr>Language<span class="tsd-signature-symbol">(</span>language<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="snippets.snippet.html" class="tsd-signature-type">Snippet</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/90bc638/src/index.ts#L523">index.ts:523</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="setfilterfunction" class="tsd-anchor"></a>
-					<h3>set<wbr>Filter<wbr>Function</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Filter<wbr>Function<span class="tsd-signature-symbol">(</span>filterFn<span class="tsd-signature-symbol">: </span><a href="../modules/menu.html#filterfunc" class="tsd-signature-type">filterFunc</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/90bc638/src/index.ts#L526">index.ts:526</a></li>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/90bc638/src/index.ts#L82">index.ts:82</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>filterFn: <a href="../modules/menu.html#filterfunc" class="tsd-signature-type">filterFunc</a></h5>
+									<h5>language: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="snippets.snippet.html" class="tsd-signature-type">Snippet</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="setitems" class="tsd-anchor"></a>
-					<h3>set<wbr>Items</h3>
+					<a name="insertsnippet" class="tsd-anchor"></a>
+					<h3>insert<wbr>Snippet</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Items<span class="tsd-signature-symbol">(</span>items<span class="tsd-signature-symbol">: </span><a href="menu.menuoption.html" class="tsd-signature-type">MenuOption</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">insert<wbr>Snippet<span class="tsd-signature-symbol">(</span>snippet<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/90bc638/src/index.ts#L522">index.ts:522</a></li>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/90bc638/src/index.ts#L76">index.ts:76</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>items: <a href="menu.menuoption.html" class="tsd-signature-type">MenuOption</a><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>snippet: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="setloading" class="tsd-anchor"></a>
-					<h3>set<wbr>Loading</h3>
+					<a name="nextplaceholder" class="tsd-anchor"></a>
+					<h3>next<wbr>Placeholder</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Loading<span class="tsd-signature-symbol">(</span>isLoading<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">next<wbr>Placeholder<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/90bc638/src/index.ts#L521">index.ts:521</a></li>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/90bc638/src/index.ts#L79">index.ts:79</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="previousplaceholder" class="tsd-anchor"></a>
+					<h3>previous<wbr>Placeholder</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">previous<wbr>Placeholder<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/90bc638/src/index.ts#L80">index.ts:80</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="registersnippetprovider" class="tsd-anchor"></a>
+					<h3>register<wbr>Snippet<wbr>Provider</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Snippet<wbr>Provider<span class="tsd-signature-symbol">(</span>snippetProvider<span class="tsd-signature-symbol">: </span><a href="snippets.snippetprovider.html" class="tsd-signature-type">SnippetProvider</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/90bc638/src/index.ts#L83">index.ts:83</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>isLoading: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>snippetProvider: <a href="snippets.snippetprovider.html" class="tsd-signature-type">SnippetProvider</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="show" class="tsd-anchor"></a>
-					<h3>show</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">show<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/90bc638/src/index.ts#L524">index.ts:524</a></li>
-								</ul>
-							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -297,7 +260,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/coordinates.html">Coordinates</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/menu.html">Menu</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -306,7 +269,7 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/shapes.html">Shapes</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/snippets.html">Snippets</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -320,58 +283,40 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="menu.api.html" class="tsd-kind-icon">Api</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="menu.imenuoptionwithhighlights.html" class="tsd-kind-icon">IMenu<wbr>Option<wbr>With<wbr>Highlights</a>
+						<a href="snippets.snippet.html" class="tsd-kind-icon">Snippet</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="menu.menuinstance.html" class="tsd-kind-icon">Menu<wbr>Instance</a>
+						<a href="snippets.snippetmanager.html" class="tsd-kind-icon">Snippet<wbr>Manager</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="menu.menuinstance.html#onfiltertextchanged" class="tsd-kind-icon">on<wbr>Filter<wbr>Text<wbr>Changed</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="menu.menuinstance.html#onhide" class="tsd-kind-icon">on<wbr>Hide</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="menu.menuinstance.html#onitemselected" class="tsd-kind-icon">on<wbr>Item<wbr>Selected</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="menu.menuinstance.html#onselecteditemchanged" class="tsd-kind-icon">on<wbr>Selected<wbr>Item<wbr>Changed</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="menu.menuinstance.html#selecteditem" class="tsd-kind-icon">selected<wbr>Item</a>
+								<a href="snippets.snippetmanager.html#issnippetactive" class="tsd-kind-icon">is<wbr>Snippet<wbr>Active</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="menu.menuinstance.html#hide" class="tsd-kind-icon">hide</a>
+								<a href="snippets.snippetmanager.html#cancel" class="tsd-kind-icon">cancel</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="menu.menuinstance.html#isopen" class="tsd-kind-icon">is<wbr>Open</a>
+								<a href="snippets.snippetmanager.html#getsnippetsforlanguage" class="tsd-kind-icon">get<wbr>Snippets<wbr>For<wbr>Language</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="menu.menuinstance.html#setfilterfunction" class="tsd-kind-icon">set<wbr>Filter<wbr>Function</a>
+								<a href="snippets.snippetmanager.html#insertsnippet" class="tsd-kind-icon">insert<wbr>Snippet</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="menu.menuinstance.html#setitems" class="tsd-kind-icon">set<wbr>Items</a>
+								<a href="snippets.snippetmanager.html#nextplaceholder" class="tsd-kind-icon">next<wbr>Placeholder</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="menu.menuinstance.html#setloading" class="tsd-kind-icon">set<wbr>Loading</a>
+								<a href="snippets.snippetmanager.html#previousplaceholder" class="tsd-kind-icon">previous<wbr>Placeholder</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="menu.menuinstance.html#show" class="tsd-kind-icon">show</a>
+								<a href="snippets.snippetmanager.html#registersnippetprovider" class="tsd-kind-icon">register<wbr>Snippet<wbr>Provider</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="menu.menuoption.html" class="tsd-kind-icon">Menu<wbr>Option</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="../modules/menu.html#filterfunc" class="tsd-kind-icon">filter<wbr>Func</a>
+						<a href="snippets.snippetprovider.html" class="tsd-kind-icon">Snippet<wbr>Provider</a>
 					</li>
 				</ul>
 			</nav>
