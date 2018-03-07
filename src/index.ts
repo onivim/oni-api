@@ -48,6 +48,42 @@ export interface Workspace {
     onDirectoryChanged: IEvent<string>
 }
 
+export namespace Snippets {
+    /**
+     * Metadata describing a snippet
+     */
+    export interface Snippet {
+        prefix: string
+        body: string
+        description: string
+    }
+
+    /**
+     * `SnippetProvider` is a strategy for providing snippets for a particular language
+     *
+     * This can range from loading from a file/network to ad-hoc configuration in user config.
+     */
+    export interface SnippetProvider {
+        getSnippets(language: string): Promise<Snippet[]>
+    }
+
+    /**
+     * `SnippetManager` is the main entry point for integrating with snippets.
+     */
+    export interface SnippetManager {
+        isSnippetActive: boolean
+
+        insertSnippet(snippet: string): Promise<void>
+
+        cancel(): Promise<void>
+        nextPlaceholder(): Promise<void>
+        previousPlaceholder(): Promise<void>
+
+        getSnippetsForLanguage(language: string): Promise<Snippet[]>
+        registerSnippetProvider(snippetProvider: SnippetProvider): void
+    }
+}
+
 export type Direction = "left" | "right" | "down" | "up"
 export type SplitDirection = "horizontal" | "vertical"
 
