@@ -1,5 +1,4 @@
 import * as ChildProcess from "child_process"
-import { EventEmitter } from "events"
 
 import * as types from "vscode-languageserver-types"
 
@@ -573,7 +572,7 @@ export namespace Plugin {
         }
     }
 
-    export interface Api extends EventEmitter {
+    export interface Api {
         automation: Automation.Api
         colors: IColors
         commands: Commands.Api
