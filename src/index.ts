@@ -81,8 +81,14 @@ export namespace Overlays {
     }
 }
 
-export interface Workspace {
-    onDirectoryChanged: IEvent<string>
+export namespace Workspace {
+
+    export interface Api {
+        activeWorkspace: string
+        onDirectoryChanged: IEvent<string>
+
+        changeDirectory(newWorkspaceDirectory: string): void
+    }
 }
 
 export namespace Snippets {
@@ -683,6 +689,6 @@ export namespace Plugin {
         snippets: Snippets.SnippetManager
         statusBar: StatusBar
         windows: IWindowManager
-        workspace: Workspace
+        workspace: Workspace.Api
     }
 }
