@@ -43,6 +43,44 @@ export interface Configuration {
     setValues(configurationValues: ConfigurationValues): void
 }
 
+export namespace Notifications {
+
+    export interface Notification {
+        onClick: IEvent<void> 
+        onClose: IEvent<void>
+
+        setContents(title: string, detail: string): void
+        setExpiration(expirationTimeInMilliseconds: number): void
+
+        show(): void
+        hide(): void
+    }
+    
+    export interface Api {
+        enable(): void
+        disable(): void
+
+        createItem(): Notification
+    }
+}
+
+export namespace Overlays {
+    /**
+     * An overlay is a full-screen UI element,
+     * that renders above the editor layer.
+     */
+    export interface Overlay {
+       hide(): void
+       show(): void
+
+       setContents(element: JSX.Element): void
+    }
+
+    export interface Api {
+        createItem(): Overlay
+    }
+}
+
 export interface Workspace {
     onDirectoryChanged: IEvent<string>
 }
@@ -636,6 +674,8 @@ export namespace Plugin {
         input: Input.InputManager
         language: any /* TODO */
         log: any /* TODO */
+        notifications: Notifications.Api
+        overlays: Overlays.Api
         plugins: IPluginManager
         menu: Menu.Api
         process: Process
