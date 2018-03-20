@@ -17,15 +17,15 @@ export namespace Achievements {
      *
      * An achievement consists of a name, title, along with one or more sub goals
      */
-    export interface AchievementDefinition {
+    export interface Definition {
         uniqueId: string
         name: string
         description: string
 
-        goals: AchievementGoalDefinition[]
+        goals: Goal[]
     }
 
-    export interface AchievementGoalDefinition {
+    export interface Goal {
         name: string
         goalId: string
         count: number
@@ -33,9 +33,9 @@ export namespace Achievements {
     
     export interface Api {
         notifyGoal(goalId: string): void 
-        registerAchievement(definition: AchievementDefinition): void
+        registerAchievement(definition: Definition): void
 
-        onAchievementAccomplished: IEvent<AchievementDefinition>
+        onAchievementAccomplished: IEvent<Definition>
     }
 }
 
