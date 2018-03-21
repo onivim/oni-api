@@ -45,26 +45,35 @@ export interface Configuration {
 }
 
 export namespace Preview {
-
     export interface PreviewContext {
-        sourceBuffer: Buffer
-
-        mappedFilePath: string
-
-        previewFileContents: string
+        filePath: string
+        language: string
     }
 
-    export type PreviewOptions = { [key: string]: any }
-
+    /**
+     * Previewer
+     *
+     * Interface for a preview strategy
+     */
     export interface Previewer {
         render(context: PreviewContext): JSX.Element
     }
     
     export interface Api {
+        /**
+         * Register a preview strategy
+         */
         registerPreviewer(identifier: string, previewer: Previewer): void
 
-        registerDefaultPreviewerForLanguage(language: string, previewIdentifier: string, options?: PreviewOptions): void
+        /**
+         * Set the default preview strategy for a filetype
+         */
+        registerDefaultPreviewerForLanguage(language: string, previewIdentifier: string): void
         
+
+        /**
+         * Open the preview experience
+         */
         openPreview(openMode: FileOpenMode): Promise<void>
     }
 }
