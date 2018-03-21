@@ -1,5 +1,4 @@
 import * as ChildProcess from "child_process"
-import { EventEmitter } from "events"
 
 import * as types from "vscode-languageserver-types"
 
@@ -78,8 +77,52 @@ export namespace Preview {
     }
 }
 
-export interface Workspace {
-    onDirectoryChanged: IEvent<string>
+export namespace Notifications {
+
+    export interface Notification {
+        onClick: IEvent<void> 
+        onClose: IEvent<void>
+
+        setContents(title: string, detail: string): void
+        setExpiration(expirationTimeInMilliseconds: number): void
+
+        show(): void
+        hide(): void
+    }
+    
+    export interface Api {
+        enable(): void
+        disable(): void
+
+        createItem(): Notification
+    }
+}
+
+export namespace Overlays {
+    /**
+     * An overlay is a full-screen UI element,
+     * that renders above the editor layer.
+     */
+    export interface Overlay {
+       hide(): void
+       show(): void
+
+       setContents(element: JSX.Element): void
+    }
+
+    export interface Api {
+        createItem(): Overlay
+    }
+}
+
+export namespace Workspace {
+
+    export interface Api {
+        activeWorkspace: string
+        onDirectoryChanged: IEvent<string>
+
+        changeDirectory(newWorkspaceDirectory: string): void
+    }
 }
 
 export namespace Snippets {
@@ -215,11 +258,64 @@ export interface EditorManager {
     openFile(filePath: string, options?: FileOpenOptions): Promise<Buffer>
 }
 
-export interface InputManager {
-    bind(keyChord: string | string[], actionFunction: any, filterFunction?: () => boolean): void
-    hasBinding(keyChord: string): boolean
-    unbind(keyChord: string | string[]): void
-    unbindAll(): void
+/** 
+ * Input API entry point
+ */
+export namespace Input {
+
+    export type InputAction = () => void
+
+    /**
+     * Often, you want a keybinding to be available in certain modes, but not other modes.
+     * Vim handles this by exposing several variations of its `map` command (like `nmap`, `imap`, `noremap`, etc)
+     *
+     * In Oni, the filter function determines whether or not a binding ins enabled. It's simply a function
+     * that returns `true` or `false`.
+     */
+    export type InputFilter = () => boolean
+
+    export interface InputManager {
+
+        /**
+         * Bind a key or set of keys to an _action_
+         *
+         * The _action_ can either be a JavaScript callback, or a _command_ string.
+         * 
+         * To see available command strings, check out our [KeyBindings file](https://github.com/onivim/oni/blob/master/browser/src/Input/KeyBindings.ts)
+         *
+         * `filterFunction` is an optional third argument. If it returns `true`, the input
+         * binding is enabled. This is helpful, for example, to enable key bindings only
+         * in certain conditions.
+         *
+         * An example usage of the filter function might be:
+         * ```
+         * const isNormalMode = () => oni.editors.activeEditor.mode === "normal"
+         * const isVisualMode = () => oni.editors.activeEditor.mode === "visual"
+         * oni.input.bind("<esc>", () => alert("Escape pressed in normal mode!"), isNormalMode);
+         * oni.input.bind("<esc>", () => alert("Escape pressed in visual mode!"), isVisualMode);
+         * ```
+         *
+         * In this case, the `isNormalMode` and `isVisualMode` functions are used as _filters_. When the `<esc>` key is pressed,
+         * all bindings for `<esc>` are evaluated, and the first one with a passing filter (or no filter) is used.
+         */
+        bind(keyChord: string | string[], actionOrCommand: InputAction | string, filterFunction?: InputFilter): void
+
+        hasBinding(keyChord: string): boolean
+
+        /**
+         * `unbind` removes an keybindings present on a key.
+         *
+         * `unbind` is useful for removing default functionality. When your configuration is loaded, the default
+         * keybindings provided by Oni are applied, but you can always opt-out of these in order to restore
+         * default functionality.
+         *
+         * For example, if I would prefer to use the [CtrlP](https://github.com/ctrlpvim/ctrlp.vim) plugin, you could [install that plugin](https://github.com/onivim/oni/wiki/Plugins#installing-a-vim-plugin),
+         * and then use `oni.input.unbind("<c-p>")` to prevent Oni from opening the bundled file opener. When there are no keybindings present, the input sequence is passed to the active editor (usually Neovim) to handle.
+         */
+        unbind(keyChord: string | string[]): void
+
+        unbindAll(): void
+    }
 }
 
 export interface IPluginManager {
@@ -607,7 +703,7 @@ export namespace Plugin {
         }
     }
 
-    export interface Api extends EventEmitter {
+    export interface Api {
         automation: Automation.Api
         colors: IColors
         commands: Commands.Api
@@ -615,9 +711,11 @@ export namespace Plugin {
         contextMenu: any /* TODO */
         diagnostics: Diagnostics.Api
         editors: EditorManager
-        input: InputManager
+        input: Input.InputManager
         language: any /* TODO */
         log: any /* TODO */
+        notifications: Notifications.Api
+        overlays: Overlays.Api
         plugins: IPluginManager
         menu: Menu.Api
         process: Process
@@ -625,6 +723,6 @@ export namespace Plugin {
         snippets: Snippets.SnippetManager
         statusBar: StatusBar
         windows: IWindowManager
-        workspace: Workspace
+        workspace: Workspace.Api
     }
 }
