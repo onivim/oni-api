@@ -718,6 +718,7 @@ export namespace Plugin {
         overlays: Overlays.Api
         plugins: IPluginManager
         menu: Menu.Api
+        preview: Preview.Api
         process: Process
         recorder: Recorder
         snippets: Snippets.SnippetManager
