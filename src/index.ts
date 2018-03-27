@@ -35,7 +35,7 @@ export interface IToken {
     range: types.Range
 }
 
-export type ConfigurationValues = { [key: string]: any}
+export type ConfigurationValues = { [key: string]: any }
 
 export interface Configuration {
     onConfigurationChanged: IEvent<ConfigurationValues>
@@ -44,9 +44,8 @@ export interface Configuration {
 }
 
 export namespace Notifications {
-
     export interface Notification {
-        onClick: IEvent<void> 
+        onClick: IEvent<void>
         onClose: IEvent<void>
 
         setContents(title: string, detail: string): void
@@ -55,7 +54,7 @@ export namespace Notifications {
         show(): void
         hide(): void
     }
-    
+
     export interface Api {
         enable(): void
         disable(): void
@@ -70,10 +69,10 @@ export namespace Overlays {
      * that renders above the editor layer.
      */
     export interface Overlay {
-       hide(): void
-       show(): void
+        hide(): void
+        show(): void
 
-       setContents(element: JSX.Element): void
+        setContents(element: JSX.Element): void
     }
 
     export interface Api {
@@ -82,7 +81,6 @@ export namespace Overlays {
 }
 
 export namespace Workspace {
-
     export interface Api {
         activeWorkspace: string
         onDirectoryChanged: IEvent<string>
@@ -145,7 +143,6 @@ export interface WindowSplitHandle {
     // Set focus on a split
     focus(): void
 
-
     // Set the size of the split. Dependent on the split orientation.
     setSize(size: number): void
 }
@@ -193,11 +190,10 @@ export interface FileOpenOptions {
 }
 
 export const DefaultFileOpenOptions: FileOpenOptions = {
-    openMode: FileOpenMode.Edit
+    openMode: FileOpenMode.Edit,
 }
 
 export interface EditorManager {
-
     /**
      * An array of all available `Editor` instances
      */
@@ -224,11 +220,10 @@ export interface EditorManager {
     openFile(filePath: string, options?: FileOpenOptions): Promise<Buffer>
 }
 
-/** 
+/**
  * Input API entry point
  */
 export namespace Input {
-
     export type InputAction = () => void
 
     /**
@@ -241,12 +236,11 @@ export namespace Input {
     export type InputFilter = () => boolean
 
     export interface InputManager {
-
         /**
          * Bind a key or set of keys to an _action_
          *
          * The _action_ can either be a JavaScript callback, or a _command_ string.
-         * 
+         *
          * To see available command strings, check out our [KeyBindings file](https://github.com/onivim/oni/blob/master/browser/src/Input/KeyBindings.ts)
          *
          * `filterFunction` is an optional third argument. If it returns `true`, the input
@@ -257,14 +251,18 @@ export namespace Input {
          * ```
          * const isNormalMode = () => oni.editors.activeEditor.mode === "normal"
          * const isVisualMode = () => oni.editors.activeEditor.mode === "visual"
-         * oni.input.bind("<esc>", () => alert("Escape pressed in normal mode!"), isNormalMode);
-         * oni.input.bind("<esc>", () => alert("Escape pressed in visual mode!"), isVisualMode);
+         * oni.input.bind("<esc>", () => alert("Escape pressed in normal mode!"), isNormalMode)
+         * oni.input.bind("<esc>", () => alert("Escape pressed in visual mode!"), isVisualMode)
          * ```
          *
          * In this case, the `isNormalMode` and `isVisualMode` functions are used as _filters_. When the `<esc>` key is pressed,
          * all bindings for `<esc>` are evaluated, and the first one with a passing filter (or no filter) is used.
          */
-        bind(keyChord: string | string[], actionOrCommand: InputAction | string, filterFunction?: InputFilter): void
+        bind(
+            keyChord: string | string[],
+            actionOrCommand: InputAction | string,
+            filterFunction?: InputFilter,
+        ): void
 
         hasBinding(keyChord: string): boolean
 
@@ -299,7 +297,6 @@ export namespace Automation {
     export type WaitConditionChecker = () => boolean
 
     export interface Api {
-
         // Send input directly to the active editor
         sendKeys(key: string): void
 
@@ -318,7 +315,6 @@ export namespace Automation {
 }
 
 export interface NeovimEditorCapability {
-
     // Call a VimL function and return the result
     callFunction(functionName: string, args: any[]): Promise<any>
 
@@ -340,7 +336,6 @@ export interface NeovimEditorCapability {
  * rendering layer of the buffer.
  */
 export interface BufferLayer {
-
     /**
      * Unique id for the buffer layer. This must be globally unique and is used to reference the layer.
      */
@@ -490,21 +485,20 @@ export interface Log {
  * by the `recorder.outputPath` option.
  */
 export interface Recorder {
+    /**
+     * Returns `true` if a recording is in progress, `false` otherwise
+     */
+    isRecording: boolean
 
-   /**
-    * Returns `true` if a recording is in progress, `false` otherwise
-    */
-   isRecording: boolean 
-
-   /**
-    * Start recording a video.
-    *
-    * Videos are recorded in `.webm` format.
-    */
+    /**
+     * Start recording a video.
+     *
+     * Videos are recorded in `.webm` format.
+     */
     startRecording(): void
 
     /**
-     * Stop recording a video. 
+     * Stop recording a video.
      *
      * Optionally specify the destination `fileName`.
      */
@@ -524,9 +518,22 @@ export interface StatusBar {
 }
 
 export interface Process {
-    execNodeScript(scriptPath: string, args?: string[], options?: ChildProcess.ExecOptions, callback?: (err: any, stdout: string, stderr: string) => void): Promise<ChildProcess.ChildProcess>
-    spawnNodeScript(scriptPath: string, args?: string[], options?: ChildProcess.SpawnOptions): Promise<ChildProcess.ChildProcess>
-    spawnProcess(startCommand: string, args?: string[], options?: ChildProcess.SpawnOptions): Promise<ChildProcess.ChildProcess>
+    execNodeScript(
+        scriptPath: string,
+        args?: string[],
+        options?: ChildProcess.ExecOptions,
+        callback?: (err: any, stdout: string, stderr: string) => void,
+    ): Promise<ChildProcess.ChildProcess>
+    spawnNodeScript(
+        scriptPath: string,
+        args?: string[],
+        options?: ChildProcess.SpawnOptions,
+    ): Promise<ChildProcess.ChildProcess>
+    spawnProcess(
+        startCommand: string,
+        args?: string[],
+        options?: ChildProcess.SpawnOptions,
+    ): Promise<ChildProcess.ChildProcess>
 }
 
 export interface StatusBarItem {
@@ -573,7 +580,6 @@ export namespace Coordinates {
 }
 
 export namespace Shapes {
-
     export interface Rectangle {
         x: number
         y: number
@@ -596,7 +602,7 @@ export namespace Shapes {
 export namespace ToolTip {
     export enum OpenDirection {
         Up = 1,
-        Down= 2,
+        Down = 2,
     }
     export interface ToolTipOptions {
         position?: Coordinates.PixelSpacePoint
@@ -606,8 +612,32 @@ export namespace ToolTip {
     }
 }
 
+export namespace Sidebar {
+    export interface Pane {
+        id: string
+        title: string
+        [method: string]: any
+    }
+
+    export interface SidebarEntry {
+        hasNotification: boolean
+        icon: string
+        id: string
+        pane: Sidebar.Pane
+    }
+
+    export interface Api {
+        activeEntryId: string
+        isFocused: boolean
+        entries: Sidebar.SidebarEntry[]
+    }
+}
+
 export namespace Menu {
-    export type filterFunc = (items: Menu.MenuOption[], searchString: string) => IMenuOptionWithHighlights[]
+    export type filterFunc = (
+        items: Menu.MenuOption[],
+        searchString: string,
+    ) => IMenuOptionWithHighlights[]
     export interface MenuInstance {
         onHide: IEvent<void>
         onItemSelected: IEvent<any>
@@ -683,6 +713,7 @@ export namespace Plugin {
         notifications: Notifications.Api
         overlays: Overlays.Api
         plugins: IPluginManager
+        sidebar: Sidebar.Api
         menu: Menu.Api
         process: Process
         recorder: Recorder
