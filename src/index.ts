@@ -650,6 +650,11 @@ export namespace Menu {
          * before unpinned items
          */
         pinned?: boolean
+
+        /**
+         * Score used to sort the results.
+         */
+        score?: number
     }
 
     export interface IMenuOptionWithHighlights extends Menu.MenuOption {
