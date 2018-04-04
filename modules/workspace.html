@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>InputManager | oni-api</title>
+	<title>Workspace | oni-api</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,133 +56,27 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="inputmanager.html">InputManager</a>
+					<a href="workspace.html">Workspace</a>
 				</li>
 			</ul>
-			<h1>Interface InputManager</h1>
+			<h1>Module Workspace</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-hierarchy">
-				<h3>Hierarchy</h3>
-				<ul class="tsd-hierarchy">
-					<li>
-						<span class="target">InputManager</span>
-					</li>
-				</ul>
-			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Methods</h3>
+							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="inputmanager.html#bind" class="tsd-kind-icon">bind</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="inputmanager.html#hasbinding" class="tsd-kind-icon">has<wbr>Binding</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="inputmanager.html#unbind" class="tsd-kind-icon">unbind</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="inputmanager.html#unbindall" class="tsd-kind-icon">unbind<wbr>All</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/workspace.api.html" class="tsd-kind-icon">Api</a></li>
 							</ul>
 						</section>
 					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="bind" class="tsd-anchor"></a>
-					<h3>bind</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">bind<span class="tsd-signature-symbol">(</span>keyChord<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, actionFunction<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, filterFunction<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/a5fbcf2/src/index.ts#L184">index.ts:184</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>keyChord: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li>
-									<h5>actionFunction: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> filterFunction: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="hasbinding" class="tsd-anchor"></a>
-					<h3>has<wbr>Binding</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">has<wbr>Binding<span class="tsd-signature-symbol">(</span>keyChord<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/a5fbcf2/src/index.ts#L185">index.ts:185</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>keyChord: <span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="unbind" class="tsd-anchor"></a>
-					<h3>unbind</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">unbind<span class="tsd-signature-symbol">(</span>keyChord<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/a5fbcf2/src/index.ts#L186">index.ts:186</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>keyChord: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="unbindall" class="tsd-anchor"></a>
-					<h3>unbind<wbr>All</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">unbind<wbr>All<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/a5fbcf2/src/index.ts#L187">index.ts:187</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
 				</section>
 			</section>
 		</div>
@@ -192,31 +86,52 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
+					<li class=" tsd-kind-module">
+						<a href="automation.html">Automation</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="commands.html">Commands</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="coordinates.html">Coordinates</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="input.html">Input</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="menu.html">Menu</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="notifications.html">Notifications</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="overlays.html">Overlays</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="plugin.html">Plugin</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="shapes.html">Shapes</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="snippets.html">Snippets</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="tooltip.html">Tool<wbr>Tip</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="vim.html">Vim</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="workspace.html">Workspace</a>
+					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface">
-						<a href="inputmanager.html" class="tsd-kind-icon">Input<wbr>Manager</a>
-						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="inputmanager.html#bind" class="tsd-kind-icon">bind</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="inputmanager.html#hasbinding" class="tsd-kind-icon">has<wbr>Binding</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="inputmanager.html#unbind" class="tsd-kind-icon">unbind</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="inputmanager.html#unbindall" class="tsd-kind-icon">unbind<wbr>All</a>
-							</li>
-						</ul>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/workspace.api.html" class="tsd-kind-icon">Api</a>
 					</li>
-				</ul>
-				<ul class="after-current">
 				</ul>
 			</nav>
 		</div>

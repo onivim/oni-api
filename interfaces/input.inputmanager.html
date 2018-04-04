@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>StatusBarItem | oni-api</title>
+	<title>InputManager | oni-api</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="statusbaritem.html">StatusBarItem</a>
+					<a href="../modules/input.html">Input</a>
+				</li>
+				<li>
+					<a href="input.inputmanager.html">InputManager</a>
 				</li>
 			</ul>
-			<h1>Interface StatusBarItem</h1>
+			<h1>Interface InputManager</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +73,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">StatusBarItem</span>
+						<span class="target">InputManager</span>
 					</li>
 				</ul>
 			</section>
@@ -81,10 +84,10 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="statusbaritem.html#dispose" class="tsd-kind-icon">dispose</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="statusbaritem.html#hide" class="tsd-kind-icon">hide</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="statusbaritem.html#setcontents" class="tsd-kind-icon">set<wbr>Contents</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="statusbaritem.html#show" class="tsd-kind-icon">show</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="input.inputmanager.html#bind" class="tsd-kind-icon">bind</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="input.inputmanager.html#hasbinding" class="tsd-kind-icon">has<wbr>Binding</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="input.inputmanager.html#unbind" class="tsd-kind-icon">unbind</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="input.inputmanager.html#unbindall" class="tsd-kind-icon">unbind<wbr>All</a></li>
 							</ul>
 						</section>
 					</div>
@@ -93,56 +96,45 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="dispose" class="tsd-anchor"></a>
-					<h3>dispose</h3>
+					<a name="bind" class="tsd-anchor"></a>
+					<h3>bind</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">bind<span class="tsd-signature-symbol">(</span>keyChord<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, actionOrCommand<span class="tsd-signature-symbol">: </span><a href="../modules/input.html#inputaction" class="tsd-signature-type">InputAction</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, filterFunction<span class="tsd-signature-symbol">?: </span><a href="../modules/input.html#inputfilter" class="tsd-signature-type">InputFilter</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L536">index.ts:536</a></li>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L267">index.ts:267</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="hide" class="tsd-anchor"></a>
-					<h3>hide</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">hide<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L534">index.ts:534</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="setcontents" class="tsd-anchor"></a>
-					<h3>set<wbr>Contents</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Contents<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L535">index.ts:535</a></li>
-								</ul>
-							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Bind a key or set of keys to an <em>action</em></p>
+								</div>
+								<p>The <em>action</em> can either be a JavaScript callback, or a <em>command</em> string.</p>
+								<p>To see available command strings, check out our <a href="https://github.com/onivim/oni/blob/master/browser/src/Input/KeyBindings.ts">KeyBindings file</a></p>
+								<p><code>filterFunction</code> is an optional third argument. If it returns <code>true</code>, the input
+									binding is enabled. This is helpful, for example, to enable key bindings only
+								in certain conditions.</p>
+								<p>An example usage of the filter function might be:</p>
+								<pre><code>const isNormalMode = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> oni.editors.activeEditor.mode === <span class="hljs-string">"normal"</span>
+const isVisualMode = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> oni.editors.activeEditor.mode === <span class="hljs-string">"visual"</span>
+oni.input.bind(<span class="hljs-string">"&lt;esc&gt;"</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> alert(<span class="hljs-string">"Escape pressed in normal mode!"</span>), isNormalMode);
+oni.input.bind(<span class="hljs-string">"&lt;esc&gt;"</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> alert(<span class="hljs-string">"Escape pressed in visual mode!"</span>), isVisualMode);
+</code></pre><p>In this case, the <code>isNormalMode</code> and <code>isVisualMode</code> functions are used as <em>filters</em>. When the <code>&lt;esc&gt;</code> key is pressed,
+								all bindings for <code>&lt;esc&gt;</code> are evaluated, and the first one with a passing filter (or no filter) is used.</p>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>element: <span class="tsd-signature-type">Element</span></h5>
+									<h5>keyChord: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>actionOrCommand: <a href="../modules/input.html#inputaction" class="tsd-signature-type">InputAction</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> filterFunction: <a href="../modules/input.html#inputfilter" class="tsd-signature-type">InputFilter</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -150,16 +142,72 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="show" class="tsd-anchor"></a>
-					<h3>show</h3>
+					<a name="hasbinding" class="tsd-anchor"></a>
+					<h3>has<wbr>Binding</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">show<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">has<wbr>Binding<span class="tsd-signature-symbol">(</span>keyChord<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L533">index.ts:533</a></li>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L269">index.ts:269</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>keyChord: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="unbind" class="tsd-anchor"></a>
+					<h3>unbind</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">unbind<span class="tsd-signature-symbol">(</span>keyChord<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L281">index.ts:281</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><code>unbind</code> removes an keybindings present on a key.</p>
+								</div>
+								<p><code>unbind</code> is useful for removing default functionality. When your configuration is loaded, the default
+									keybindings provided by Oni are applied, but you can always opt-out of these in order to restore
+								default functionality.</p>
+								<p>For example, if I would prefer to use the <a href="https://github.com/ctrlpvim/ctrlp.vim">CtrlP</a> plugin, you could <a href="https://github.com/onivim/oni/wiki/Plugins#installing-a-vim-plugin">install that plugin</a>,
+								and then use <code>oni.input.unbind(&quot;&lt;c-p&gt;&quot;)</code> to prevent Oni from opening the bundled file opener. When there are no keybindings present, the input sequence is passed to the active editor (usually Neovim) to handle.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>keyChord: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="unbindall" class="tsd-anchor"></a>
+					<h3>unbind<wbr>All</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">unbind<wbr>All<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L283">index.ts:283</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -174,31 +222,76 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/automation.html">Automation</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/commands.html">Commands</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/coordinates.html">Coordinates</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/input.html">Input</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/menu.html">Menu</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/notifications.html">Notifications</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/overlays.html">Overlays</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/plugin.html">Plugin</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/shapes.html">Shapes</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/snippets.html">Snippets</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/tooltip.html">Tool<wbr>Tip</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/vim.html">Vim</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/workspace.html">Workspace</a>
+					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface">
-						<a href="statusbaritem.html" class="tsd-kind-icon">Status<wbr>Bar<wbr>Item</a>
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
+						<a href="input.inputmanager.html" class="tsd-kind-icon">Input<wbr>Manager</a>
 						<ul>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="statusbaritem.html#dispose" class="tsd-kind-icon">dispose</a>
+								<a href="input.inputmanager.html#bind" class="tsd-kind-icon">bind</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="statusbaritem.html#hide" class="tsd-kind-icon">hide</a>
+								<a href="input.inputmanager.html#hasbinding" class="tsd-kind-icon">has<wbr>Binding</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="statusbaritem.html#setcontents" class="tsd-kind-icon">set<wbr>Contents</a>
+								<a href="input.inputmanager.html#unbind" class="tsd-kind-icon">unbind</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="statusbaritem.html#show" class="tsd-kind-icon">show</a>
+								<a href="input.inputmanager.html#unbindall" class="tsd-kind-icon">unbind<wbr>All</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/input.html#inputaction" class="tsd-kind-icon">Input<wbr>Action</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/input.html#inputfilter" class="tsd-kind-icon">Input<wbr>Filter</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

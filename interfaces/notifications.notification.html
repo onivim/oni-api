@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>StatusBarItem | oni-api</title>
+	<title>Notification | oni-api</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="statusbaritem.html">StatusBarItem</a>
+					<a href="../modules/notifications.html">Notifications</a>
+				</li>
+				<li>
+					<a href="notifications.notification.html">Notification</a>
 				</li>
 			</ul>
-			<h1>Interface StatusBarItem</h1>
+			<h1>Interface Notification</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +73,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">StatusBarItem</span>
+						<span class="target">Notification</span>
 					</li>
 				</ul>
 			</section>
@@ -79,36 +82,49 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="notifications.notification.html#onclick" class="tsd-kind-icon">on<wbr>Click</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="notifications.notification.html#onclose" class="tsd-kind-icon">on<wbr>Close</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="statusbaritem.html#dispose" class="tsd-kind-icon">dispose</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="statusbaritem.html#hide" class="tsd-kind-icon">hide</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="statusbaritem.html#setcontents" class="tsd-kind-icon">set<wbr>Contents</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="statusbaritem.html#show" class="tsd-kind-icon">show</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="notifications.notification.html#hide" class="tsd-kind-icon">hide</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="notifications.notification.html#setcontents" class="tsd-kind-icon">set<wbr>Contents</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="notifications.notification.html#setexpiration" class="tsd-kind-icon">set<wbr>Expiration</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="notifications.notification.html#show" class="tsd-kind-icon">show</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="dispose" class="tsd-anchor"></a>
-					<h3>dispose</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L536">index.ts:536</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="onclick" class="tsd-anchor"></a>
+					<h3>on<wbr>Click</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Click<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IEvent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L49">index.ts:49</a></li>
+						</ul>
+					</aside>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="onclose" class="tsd-anchor"></a>
+					<h3>on<wbr>Close</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Close<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IEvent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L50">index.ts:50</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="hide" class="tsd-anchor"></a>
 					<h3>hide</h3>
@@ -119,7 +135,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L534">index.ts:534</a></li>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L56">index.ts:56</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -130,19 +146,45 @@
 					<a name="setcontents" class="tsd-anchor"></a>
 					<h3>set<wbr>Contents</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Contents<span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Element</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Contents<span class="tsd-signature-symbol">(</span>title<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, detail<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L535">index.ts:535</a></li>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L52">index.ts:52</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>element: <span class="tsd-signature-type">Element</span></h5>
+									<h5>title: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>detail: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="setexpiration" class="tsd-anchor"></a>
+					<h3>set<wbr>Expiration</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Expiration<span class="tsd-signature-symbol">(</span>expirationTimeInMilliseconds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L53">index.ts:53</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>expirationTimeInMilliseconds: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -159,7 +201,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L533">index.ts:533</a></li>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L55">index.ts:55</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -174,26 +216,74 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/automation.html">Automation</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/commands.html">Commands</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/coordinates.html">Coordinates</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/input.html">Input</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/menu.html">Menu</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/notifications.html">Notifications</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/overlays.html">Overlays</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/plugin.html">Plugin</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/shapes.html">Shapes</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/snippets.html">Snippets</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/tooltip.html">Tool<wbr>Tip</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/vim.html">Vim</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/workspace.html">Workspace</a>
+					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="notifications.api.html" class="tsd-kind-icon">Api</a>
+					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface">
-						<a href="statusbaritem.html" class="tsd-kind-icon">Status<wbr>Bar<wbr>Item</a>
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
+						<a href="notifications.notification.html" class="tsd-kind-icon">Notification</a>
 						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="statusbaritem.html#dispose" class="tsd-kind-icon">dispose</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="notifications.notification.html#onclick" class="tsd-kind-icon">on<wbr>Click</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="notifications.notification.html#onclose" class="tsd-kind-icon">on<wbr>Close</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="statusbaritem.html#hide" class="tsd-kind-icon">hide</a>
+								<a href="notifications.notification.html#hide" class="tsd-kind-icon">hide</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="statusbaritem.html#setcontents" class="tsd-kind-icon">set<wbr>Contents</a>
+								<a href="notifications.notification.html#setcontents" class="tsd-kind-icon">set<wbr>Contents</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="statusbaritem.html#show" class="tsd-kind-icon">show</a>
+								<a href="notifications.notification.html#setexpiration" class="tsd-kind-icon">set<wbr>Expiration</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="notifications.notification.html#show" class="tsd-kind-icon">show</a>
 							</li>
 						</ul>
 					</li>

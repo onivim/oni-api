@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Commands | oni-api</title>
+	<title>Api | oni-api</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,101 +56,94 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="commands.html">Commands</a>
+					<a href="../modules/notifications.html">Notifications</a>
+				</li>
+				<li>
+					<a href="notifications.api.html">Api</a>
 				</li>
 			</ul>
-			<h1>Module Commands</h1>
+			<h1>Interface Api</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>API surface area for registering and executing commands</p>
-					</div>
-				</div>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">Api</span>
+					</li>
+				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Interfaces</h3>
+							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/commands.api.html" class="tsd-kind-icon">Api</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/commands.icommand.html" class="tsd-kind-icon">ICommand</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Type aliases</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="commands.html#commandcallback" class="tsd-kind-icon">Command<wbr>Callback</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="commands.html#commandenabledcallback" class="tsd-kind-icon">Command<wbr>Enabled<wbr>Callback</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="notifications.api.html#createitem" class="tsd-kind-icon">create<wbr>Item</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="notifications.api.html#disable" class="tsd-kind-icon">disable</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="notifications.api.html#enable" class="tsd-kind-icon">enable</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Type aliases</h2>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
-					<a name="commandcallback" class="tsd-anchor"></a>
-					<h3>Command<wbr>Callback</h3>
-					<div class="tsd-signature tsd-kind-icon">Command<wbr>Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L13">index.ts:13</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="createitem" class="tsd-anchor"></a>
+					<h3>create<wbr>Item</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Item<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="notifications.notification.html" class="tsd-signature-type">Notification</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L63">index.ts:63</a></li>
 								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5><span class="tsd-flag ts-flagOptional">Optional</span> args: <span class="tsd-signature-type">any</span></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="notifications.notification.html" class="tsd-signature-type">Notification</a></h4>
+						</li>
+					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
-					<a name="commandenabledcallback" class="tsd-anchor"></a>
-					<h3>Command<wbr>Enabled<wbr>Callback</h3>
-					<div class="tsd-signature tsd-kind-icon">Command<wbr>Enabled<wbr>Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L14">index.ts:14</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="disable" class="tsd-anchor"></a>
+					<h3>disable</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">disable<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L61">index.ts:61</a></li>
 								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-									</li>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="enable" class="tsd-anchor"></a>
+					<h3>enable</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">enable<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L60">index.ts:60</a></li>
 								</ul>
-							</li>
-						</ul>
-					</div>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -161,59 +154,68 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="automation.html">Automation</a>
+						<a href="../modules/automation.html">Automation</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/commands.html">Commands</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/coordinates.html">Coordinates</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/input.html">Input</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/menu.html">Menu</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="commands.html">Commands</a>
+						<a href="../modules/notifications.html">Notifications</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="coordinates.html">Coordinates</a>
+						<a href="../modules/overlays.html">Overlays</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="input.html">Input</a>
+						<a href="../modules/plugin.html">Plugin</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="menu.html">Menu</a>
+						<a href="../modules/shapes.html">Shapes</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="notifications.html">Notifications</a>
+						<a href="../modules/snippets.html">Snippets</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="overlays.html">Overlays</a>
+						<a href="../modules/tooltip.html">Tool<wbr>Tip</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="plugin.html">Plugin</a>
+						<a href="../modules/vim.html">Vim</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="shapes.html">Shapes</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="snippets.html">Snippets</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="tooltip.html">Tool<wbr>Tip</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="vim.html">Vim</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="workspace.html">Workspace</a>
+						<a href="../modules/workspace.html">Workspace</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
+						<a href="notifications.api.html" class="tsd-kind-icon">Api</a>
+						<ul>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="notifications.api.html#createitem" class="tsd-kind-icon">create<wbr>Item</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="notifications.api.html#disable" class="tsd-kind-icon">disable</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="notifications.api.html#enable" class="tsd-kind-icon">enable</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/commands.api.html" class="tsd-kind-icon">Api</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/commands.icommand.html" class="tsd-kind-icon">ICommand</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="commands.html#commandcallback" class="tsd-kind-icon">Command<wbr>Callback</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="commands.html#commandenabledcallback" class="tsd-kind-icon">Command<wbr>Enabled<wbr>Callback</a>
+						<a href="notifications.notification.html" class="tsd-kind-icon">Notification</a>
 					</li>
 				</ul>
 			</nav>
