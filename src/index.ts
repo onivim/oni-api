@@ -361,7 +361,6 @@ export interface BufferLayerRenderContext {
 
     windowId: number
 
-
     /**
      * The width of a character cell, in pixels
      */
