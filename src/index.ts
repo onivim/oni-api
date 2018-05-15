@@ -361,7 +361,6 @@ export interface BufferLayerRenderContext {
 
     windowId: number
 
-
     /**
      * The width of a character cell, in pixels
      */
@@ -384,6 +383,7 @@ export interface BufferLayerRenderContext {
     /**
      * Array of the visible lines, with visibleLines[0] representing the line at `topBufferLine`,
      * with length of `bottomBufferLine - topBufferLine`.
+     */
     visibleLines: string[]
 
     /**
