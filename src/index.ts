@@ -451,6 +451,10 @@ export interface Buffer {
 
     setLines(start: number, end: number, lines: string[]): Promise<void>
     setCursorPosition(line: number, column: number): Promise<void>
+    setLanguage(lang: string): Promise<void>
+    getCursorPosition(): Promise<types.Position>
+    handleInput(key: string): boolean
+    setScratchBuffer(): Promise<void>
 }
 
 export interface InactiveBuffer {
