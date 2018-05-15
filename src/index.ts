@@ -366,6 +366,37 @@ export interface BufferLayerRenderContext {
 
     windowId: number
 
+
+    /**
+     * The width of a character cell, in pixels
+     */
+    fontPixelWidth: number
+
+    /**
+     * The height of a character cell, in pixels
+     */
+    fontPixelHeight: number
+
+    /**
+     * The line number of the first line in view
+     */
+    topBufferLine: number
+    /*
+     * The line number of the last line in view
+     */
+    bottomBufferLine: number
+
+    /**
+     * Array of the visible lines, with visibleLines[0] representing the line at `topBufferLine`,
+     * with length of `bottomBufferLine - topBufferLine`.
+    visibleLines: string[]
+
+    /**
+     * Function that takes a _buffer_ position (line, character) and converts it to a
+     * _pixel space_ position
+     */
+    bufferToPixel: Coordinates.BufferToPixel
+
     /**
      * Function that takes a _buffer_ position (line, character) and converts it to a
      * _screen cell_ position.
@@ -570,6 +601,9 @@ export namespace Coordinates {
 
     // Transforms a screen space point into pixel points
     export type ScreenToPixel = (screenPoint: ScreenSpacePoint) => PixelSpacePoint | null
+
+    // Transforms a buffer position (line, column) to a pixel space point
+    export type BufferToPixel = (position: types.Position) => PixelSpacePoint | null
 }
 
 export namespace Shapes {
