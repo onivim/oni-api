@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>EditorBufferScrolledEventArgs | oni-api</title>
+	<title>Api | oni-api</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="editorbufferscrolledeventargs.html">EditorBufferScrolledEventArgs</a>
+					<a href="../modules/sidebar.html">Sidebar</a>
+				</li>
+				<li>
+					<a href="sidebar.api.html">Api</a>
 				</li>
 			</ul>
-			<h1>Interface EditorBufferScrolledEventArgs</h1>
+			<h1>Interface Api</h1>
 		</div>
 	</div>
 </header>
@@ -70,7 +73,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">EditorBufferScrolledEventArgs</span>
+						<span class="target">Api</span>
 					</li>
 				</ul>
 			</section>
@@ -81,9 +84,9 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="editorbufferscrolledeventargs.html#buffertotallines" class="tsd-kind-icon">buffer<wbr>Total<wbr>Lines</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="editorbufferscrolledeventargs.html#windowbottomline" class="tsd-kind-icon">window<wbr>Bottom<wbr>Line</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="editorbufferscrolledeventargs.html#windowtopline" class="tsd-kind-icon">window<wbr>Top<wbr>Line</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="sidebar.api.html#activeentryid" class="tsd-kind-icon">active<wbr>Entry<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="sidebar.api.html#entries" class="tsd-kind-icon">entries</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="sidebar.api.html#isfocused" class="tsd-kind-icon">is<wbr>Focused</a></li>
 							</ul>
 						</section>
 					</div>
@@ -92,32 +95,32 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="buffertotallines" class="tsd-anchor"></a>
-					<h3>buffer<wbr>Total<wbr>Lines</h3>
-					<div class="tsd-signature tsd-kind-icon">buffer<wbr>Total<wbr>Lines<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="activeentryid" class="tsd-anchor"></a>
+					<h3>active<wbr>Entry<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">active<wbr>Entry<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L455">index.ts:455</a></li>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L668">index.ts:668</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="windowbottomline" class="tsd-anchor"></a>
-					<h3>window<wbr>Bottom<wbr>Line</h3>
-					<div class="tsd-signature tsd-kind-icon">window<wbr>Bottom<wbr>Line<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="entries" class="tsd-anchor"></a>
+					<h3>entries</h3>
+					<div class="tsd-signature tsd-kind-icon">entries<span class="tsd-signature-symbol">:</span> <a href="sidebar.sidebarentry.html" class="tsd-signature-type">SidebarEntry</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L457">index.ts:457</a></li>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L670">index.ts:670</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="windowtopline" class="tsd-anchor"></a>
-					<h3>window<wbr>Top<wbr>Line</h3>
-					<div class="tsd-signature tsd-kind-icon">window<wbr>Top<wbr>Line<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="isfocused" class="tsd-anchor"></a>
+					<h3>is<wbr>Focused</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Focused<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L456">index.ts:456</a></li>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L669">index.ts:669</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -129,28 +132,76 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/automation.html">Automation</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/commands.html">Commands</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/coordinates.html">Coordinates</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/input.html">Input</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/menu.html">Menu</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/notifications.html">Notifications</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/overlays.html">Overlays</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/plugin.html">Plugin</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/shapes.html">Shapes</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/sidebar.html">Sidebar</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/snippets.html">Snippets</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/tooltip.html">Tool<wbr>Tip</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/vim.html">Vim</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/workspace.html">Workspace</a>
+					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface">
-						<a href="editorbufferscrolledeventargs.html" class="tsd-kind-icon">Editor<wbr>Buffer<wbr>Scrolled<wbr>Event<wbr>Args</a>
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
+						<a href="sidebar.api.html" class="tsd-kind-icon">Api</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="editorbufferscrolledeventargs.html#buffertotallines" class="tsd-kind-icon">buffer<wbr>Total<wbr>Lines</a>
+								<a href="sidebar.api.html#activeentryid" class="tsd-kind-icon">active<wbr>Entry<wbr>Id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="editorbufferscrolledeventargs.html#windowbottomline" class="tsd-kind-icon">window<wbr>Bottom<wbr>Line</a>
+								<a href="sidebar.api.html#entries" class="tsd-kind-icon">entries</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="editorbufferscrolledeventargs.html#windowtopline" class="tsd-kind-icon">window<wbr>Top<wbr>Line</a>
+								<a href="sidebar.api.html#isfocused" class="tsd-kind-icon">is<wbr>Focused</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="sidebar.pane.html" class="tsd-kind-icon">Pane</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="sidebar.sidebarentry.html" class="tsd-kind-icon">Sidebar<wbr>Entry</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

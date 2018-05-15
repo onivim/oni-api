@@ -105,7 +105,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L267">index.ts:267</a></li>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L261">index.ts:261</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -120,8 +120,8 @@
 								<p>An example usage of the filter function might be:</p>
 								<pre><code>const isNormalMode = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> oni.editors.activeEditor.mode === <span class="hljs-string">"normal"</span>
 const isVisualMode = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> oni.editors.activeEditor.mode === <span class="hljs-string">"visual"</span>
-oni.input.bind(<span class="hljs-string">"&lt;esc&gt;"</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> alert(<span class="hljs-string">"Escape pressed in normal mode!"</span>), isNormalMode);
-oni.input.bind(<span class="hljs-string">"&lt;esc&gt;"</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> alert(<span class="hljs-string">"Escape pressed in visual mode!"</span>), isVisualMode);
+oni.input.bind(<span class="hljs-string">"&lt;esc&gt;"</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> alert(<span class="hljs-string">"Escape pressed in normal mode!"</span>), isNormalMode)
+oni.input.bind(<span class="hljs-string">"&lt;esc&gt;"</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> alert(<span class="hljs-string">"Escape pressed in visual mode!"</span>), isVisualMode)
 </code></pre><p>In this case, the <code>isNormalMode</code> and <code>isVisualMode</code> functions are used as <em>filters</em>. When the <code>&lt;esc&gt;</code> key is pressed,
 								all bindings for <code>&lt;esc&gt;</code> are evaluated, and the first one with a passing filter (or no filter) is used.</p>
 							</div>
@@ -151,7 +151,7 @@ oni.input.bind(<span class="hljs-string">"&lt;esc&gt;"</span>, <span class="hljs
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L269">index.ts:269</a></li>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L267">index.ts:267</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -174,7 +174,7 @@ oni.input.bind(<span class="hljs-string">"&lt;esc&gt;"</span>, <span class="hljs
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L281">index.ts:281</a></li>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L279">index.ts:279</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -207,7 +207,7 @@ oni.input.bind(<span class="hljs-string">"&lt;esc&gt;"</span>, <span class="hljs
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L283">index.ts:283</a></li>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L281">index.ts:281</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -248,6 +248,9 @@ oni.input.bind(<span class="hljs-string">"&lt;esc&gt;"</span>, <span class="hljs
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/shapes.html">Shapes</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/sidebar.html">Sidebar</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/snippets.html">Snippets</a>

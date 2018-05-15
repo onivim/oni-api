@@ -88,10 +88,15 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="bufferlayerrendercontext.html#bottombufferline" class="tsd-kind-icon">bottom<wbr>Buffer<wbr>Line</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="bufferlayerrendercontext.html#buffertopixel" class="tsd-kind-icon">buffer<wbr>ToPixel</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="bufferlayerrendercontext.html#buffertoscreen" class="tsd-kind-icon">buffer<wbr>ToScreen</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="bufferlayerrendercontext.html#dimensions" class="tsd-kind-icon">dimensions</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="bufferlayerrendercontext.html#fontpixelheight" class="tsd-kind-icon">font<wbr>Pixel<wbr>Height</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="bufferlayerrendercontext.html#fontpixelwidth" class="tsd-kind-icon">font<wbr>Pixel<wbr>Width</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="bufferlayerrendercontext.html#isactive" class="tsd-kind-icon">is<wbr>Active</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="bufferlayerrendercontext.html#screentopixel" class="tsd-kind-icon">screen<wbr>ToPixel</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="bufferlayerrendercontext.html#topbufferline" class="tsd-kind-icon">top<wbr>Buffer<wbr>Line</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="bufferlayerrendercontext.html#windowid" class="tsd-kind-icon">window<wbr>Id</a></li>
 							</ul>
 						</section>
@@ -101,12 +106,42 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="bottombufferline" class="tsd-anchor"></a>
+					<h3>bottom<wbr>Buffer<wbr>Line</h3>
+					<div class="tsd-signature tsd-kind-icon">bottom<wbr>Buffer<wbr>Line<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L382">index.ts:382</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="buffertopixel" class="tsd-anchor"></a>
+					<h3>buffer<wbr>ToPixel</h3>
+					<div class="tsd-signature tsd-kind-icon">buffer<wbr>ToPixel<span class="tsd-signature-symbol">:</span> <a href="../modules/coordinates.html#buffertopixel" class="tsd-signature-type">BufferToPixel</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L393">index.ts:393</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Array of the visible lines, with visibleLines[0] representing the line at <code>topBufferLine</code>,
+								with length of <code>bottomBufferLine - topBufferLine</code>.
+							visibleLines: string[]</p>
+						</div>
+						<p>/**
+							Function that takes a <em>buffer</em> position (line, character) and converts it to a
+						<em>pixel space</em> position</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="buffertoscreen" class="tsd-anchor"></a>
 					<h3>buffer<wbr>ToScreen</h3>
 					<div class="tsd-signature tsd-kind-icon">buffer<wbr>ToScreen<span class="tsd-signature-symbol">:</span> <a href="../modules/coordinates.html#buffertoscreen" class="tsd-signature-type">BufferToScreen</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L373">index.ts:373</a></li>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L399">index.ts:399</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -122,7 +157,7 @@
 					<div class="tsd-signature tsd-kind-icon">dimensions<span class="tsd-signature-symbol">:</span> <a href="../modules/shapes.rectangle.html" class="tsd-signature-type">Rectangle</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L383">index.ts:383</a></li>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L409">index.ts:409</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -132,12 +167,42 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="fontpixelheight" class="tsd-anchor"></a>
+					<h3>font<wbr>Pixel<wbr>Height</h3>
+					<div class="tsd-signature tsd-kind-icon">font<wbr>Pixel<wbr>Height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L373">index.ts:373</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The height of a character cell, in pixels</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="fontpixelwidth" class="tsd-anchor"></a>
+					<h3>font<wbr>Pixel<wbr>Width</h3>
+					<div class="tsd-signature tsd-kind-icon">font<wbr>Pixel<wbr>Width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L368">index.ts:368</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The width of a character cell, in pixels</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="isactive" class="tsd-anchor"></a>
 					<h3>is<wbr>Active</h3>
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Active<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L365">index.ts:365</a></li>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L360">index.ts:360</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -147,7 +212,7 @@
 					<div class="tsd-signature tsd-kind-icon">screen<wbr>ToPixel<span class="tsd-signature-symbol">:</span> <a href="../modules/coordinates.html#screentopixel" class="tsd-signature-type">ScreenToPixel</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L378">index.ts:378</a></li>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L404">index.ts:404</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -157,12 +222,27 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="topbufferline" class="tsd-anchor"></a>
+					<h3>top<wbr>Buffer<wbr>Line</h3>
+					<div class="tsd-signature tsd-kind-icon">top<wbr>Buffer<wbr>Line<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L378">index.ts:378</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The line number of the first line in view</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="windowid" class="tsd-anchor"></a>
 					<h3>window<wbr>Id</h3>
 					<div class="tsd-signature tsd-kind-icon">window<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/3b9ec87/src/index.ts#L367">index.ts:367</a></li>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/e28b15b/src/index.ts#L362">index.ts:362</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -184,16 +264,31 @@
 						<a href="bufferlayerrendercontext.html" class="tsd-kind-icon">Buffer<wbr>Layer<wbr>Render<wbr>Context</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="bufferlayerrendercontext.html#bottombufferline" class="tsd-kind-icon">bottom<wbr>Buffer<wbr>Line</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="bufferlayerrendercontext.html#buffertopixel" class="tsd-kind-icon">buffer<wbr>ToPixel</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="bufferlayerrendercontext.html#buffertoscreen" class="tsd-kind-icon">buffer<wbr>ToScreen</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="bufferlayerrendercontext.html#dimensions" class="tsd-kind-icon">dimensions</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="bufferlayerrendercontext.html#fontpixelheight" class="tsd-kind-icon">font<wbr>Pixel<wbr>Height</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="bufferlayerrendercontext.html#fontpixelwidth" class="tsd-kind-icon">font<wbr>Pixel<wbr>Width</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="bufferlayerrendercontext.html#isactive" class="tsd-kind-icon">is<wbr>Active</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="bufferlayerrendercontext.html#screentopixel" class="tsd-kind-icon">screen<wbr>ToPixel</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="bufferlayerrendercontext.html#topbufferline" class="tsd-kind-icon">top<wbr>Buffer<wbr>Line</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="bufferlayerrendercontext.html#windowid" class="tsd-kind-icon">window<wbr>Id</a>
