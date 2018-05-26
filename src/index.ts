@@ -437,7 +437,7 @@ export interface Editor {
     /**
      * Sets whether or not space characters should be inserted when pressing tab.
      */
-    setInsertSpaces(shouldInsertSpacesForTab: boolean): void
+    setInsertSpacesForTab(shouldInsertSpacesForTab: boolean): void
 
     /**
      * Sets the size of a tab. If `setInsertSpaces` is `false`, this is the display size of the tab.
