@@ -411,6 +411,18 @@ export interface BufferLayerRenderContext {
 
 export type InputCallbackFunction = (input: string) => Promise<void>
 
+export type EditorTextOptions = {
+    /**
+     * Whether or not spaces should be inserted for tab characters
+     */
+    insertSpacesForTab: boolean
+
+    /**
+     * Size of tabs, in characters
+     */
+    tabSize: number
+}
+
 export interface Editor {
     mode: string
 
@@ -433,6 +445,8 @@ export interface Editor {
     openFile(file: string, openOptions?: FileOpenOptions): Promise<Buffer>
 
     getBuffers(): Array<Buffer | InactiveBuffer>
+
+    setTextOptions(textOptions: EditorTextOptions): Promise<void>
 
     onBufferEnter: IEvent<EditorBufferEventArgs>
     onBufferLeave: IEvent<EditorBufferEventArgs>
