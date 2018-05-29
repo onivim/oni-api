@@ -411,6 +411,18 @@ export interface BufferLayerRenderContext {
 
 export type InputCallbackFunction = (input: string) => Promise<void>
 
+export type EditorTextOptions {
+    /**
+     * Whether or not spaces should be inserted for tab characters
+     */
+    insertSpacesForTab: boolean
+
+    /**
+     * Size of tabs, in characters
+     */
+    tabSize: number
+}
+
 export interface Editor {
     mode: string
 
@@ -434,16 +446,7 @@ export interface Editor {
 
     getBuffers(): Array<Buffer | InactiveBuffer>
 
-    /**
-     * Sets whether or not space characters should be inserted when pressing tab.
-     */
-    setInsertSpacesForTab(shouldInsertSpacesForTab: boolean): void
-
-    /**
-     * Sets the size of a tab. If `setInsertSpaces` is `false`, this is the display size of the tab.
-     * If `setInsertSpaces` is `true`, this will insert the corresponding number of spaces on tab press.
-     */
-    setTabSize(tabSize: number): void
+    setTextOptions(textOptions: EditorTextOptions): Promise<void>
 
     onBufferEnter: IEvent<EditorBufferEventArgs>
     onBufferLeave: IEvent<EditorBufferEventArgs>
