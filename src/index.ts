@@ -411,7 +411,7 @@ export interface BufferLayerRenderContext {
 
 export type InputCallbackFunction = (input: string) => Promise<void>
 
-export type EditorTextOptions {
+export type EditorTextOptions = {
     /**
      * Whether or not spaces should be inserted for tab characters
      */
