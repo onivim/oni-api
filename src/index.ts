@@ -152,7 +152,7 @@ export interface IWindowManager {
     // at the boundaries, when there is no further split
     onUnhandledMove: IEvent<Direction>
 
-    activeSplit: IAugmentedSplitInfo
+    activeSplitHandle: WindowSplitHandle
 
     // Create a split on the editor surface
     // If direction is 'left', 'right', 'down', or 'up', the split
@@ -170,18 +170,6 @@ export interface IWindowManager {
 export interface IWindowSplit {
     render(): JSX.Element
 }
-
-export interface IAugmentedSplitInfo extends IWindowSplit {
-    // Internal bookkeeping
-    id: string
-
-    innerSplit: IWindowSplit
-
-    // Potential API methods
-    enter?(): void
-    leave?(): void
-}
-
 
 export enum FileOpenMode {
     // Open file in existing editor / tab, if it is already open.
