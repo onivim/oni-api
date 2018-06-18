@@ -152,11 +152,16 @@ export interface IWindowManager {
     // at the boundaries, when there is no further split
     onUnhandledMove: IEvent<Direction>
 
+    activeSplitHandle: WindowSplitHandle
+
     // Create a split on the editor surface
     // If direction is 'left', 'right', 'down', or 'up', the split
     // will be created in a dock. Otherwise, it will be in the primary
     // editor surface.
     createSplit(direction: Direction | SplitDirection, split: IWindowSplit): WindowSplitHandle
+
+    // Focus the given split.
+    focusSplit(splitId: string): void
 
     // Moves from the currently focused split to another focused split
     move(direction: Direction): void
