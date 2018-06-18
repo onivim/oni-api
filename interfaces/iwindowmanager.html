@@ -81,6 +81,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iwindowmanager.html#activesplithandle" class="tsd-kind-icon">active<wbr>Split<wbr>Handle</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iwindowmanager.html#onunhandledmove" class="tsd-kind-icon">on<wbr>Unhandled<wbr>Move</a></li>
 							</ul>
 						</section>
@@ -88,6 +89,7 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iwindowmanager.html#createsplit" class="tsd-kind-icon">create<wbr>Split</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iwindowmanager.html#focussplit" class="tsd-kind-icon">focus<wbr>Split</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iwindowmanager.html#move" class="tsd-kind-icon">move</a></li>
 							</ul>
 						</section>
@@ -97,12 +99,22 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="activesplithandle" class="tsd-anchor"></a>
+					<h3>active<wbr>Split<wbr>Handle</h3>
+					<div class="tsd-signature tsd-kind-icon">active<wbr>Split<wbr>Handle<span class="tsd-signature-symbol">:</span> <a href="windowsplithandle.html" class="tsd-signature-type">WindowSplitHandle</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/58dfe59/src/index.ts#L155">index.ts:155</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="onunhandledmove" class="tsd-anchor"></a>
 					<h3>on<wbr>Unhandled<wbr>Move</h3>
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Unhandled<wbr>Move<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IEvent</span><span class="tsd-signature-symbol">&lt;</span><a href="../globals.html#direction" class="tsd-signature-type">Direction</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/28c695d/src/index.ts#L153">index.ts:153</a></li>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/58dfe59/src/index.ts#L153">index.ts:153</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -119,7 +131,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/28c695d/src/index.ts#L159">index.ts:159</a></li>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/58dfe59/src/index.ts#L161">index.ts:161</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -136,6 +148,29 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="focussplit" class="tsd-anchor"></a>
+					<h3>focus<wbr>Split</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">focus<wbr>Split<span class="tsd-signature-symbol">(</span>splitId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/58dfe59/src/index.ts#L164">index.ts:164</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>splitId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="move" class="tsd-anchor"></a>
 					<h3>move</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
@@ -145,7 +180,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/28c695d/src/index.ts#L162">index.ts:162</a></li>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/58dfe59/src/index.ts#L167">index.ts:167</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -176,10 +211,16 @@
 						<a href="iwindowmanager.html" class="tsd-kind-icon">IWindow<wbr>Manager</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iwindowmanager.html#activesplithandle" class="tsd-kind-icon">active<wbr>Split<wbr>Handle</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="iwindowmanager.html#onunhandledmove" class="tsd-kind-icon">on<wbr>Unhandled<wbr>Move</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iwindowmanager.html#createsplit" class="tsd-kind-icon">create<wbr>Split</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="iwindowmanager.html#focussplit" class="tsd-kind-icon">focus<wbr>Split</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
 								<a href="iwindowmanager.html#move" class="tsd-kind-icon">move</a>
