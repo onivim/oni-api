@@ -4,7 +4,17 @@ import * as types from "vscode-languageserver-types"
 
 import { Event, IEvent } from "oni-types"
 
+import * as Search from "./Search"
+import * as Ui from "./Ui"
+
 export type DisposeFunction = () => void
+
+export interface QuickFixEntry {
+    filename: string
+    lnum: number
+    col: number
+    text: string
+}
 
 /**
  * API surface area for registering and executing commands
@@ -433,6 +443,8 @@ export interface Editor {
 
     activeBuffer: Buffer
 
+    init(filesToOpen: string[]): void
+
     /**
      * Helper function to queue / block input while a long-running process
      * is occurring.
@@ -452,6 +464,10 @@ export interface Editor {
     getBuffers(): Array<Buffer | InactiveBuffer>
 
     setTextOptions(textOptions: EditorTextOptions): Promise<void>
+
+    setSelection(selectionRange: types.Range): Promise<void>
+
+    render(): JSX.Element
 
     onBufferEnter: IEvent<EditorBufferEventArgs>
     onBufferLeave: IEvent<EditorBufferEventArgs>
@@ -691,33 +707,6 @@ export namespace Sidebar {
 }
 
 export namespace Menu {
-    export type filterFunc = (
-        items: Menu.MenuOption[],
-        searchString: string,
-    ) => IMenuOptionWithHighlights[]
-    export interface MenuInstance {
-        onHide: IEvent<void>
-        onItemSelected: IEvent<any>
-        onSelectedItemChanged: IEvent<Menu.MenuOption>
-        onFilterTextChanged: IEvent<string>
-        selectedItem: MenuOption
-        setLoading(isLoading: boolean): void
-        setItems(items: MenuOption[]): void
-        isOpen(): boolean
-        show(): void
-        hide(): void
-        setFilterFunction(filterFn: filterFunc): void
-    }
-
-    export interface Api {
-        create: () => MenuInstance
-        closeActiveMenu: () => void
-        isMenuOpen: () => boolean
-        nextMenuItem: () => void
-        previousMenuItem: () => void
-        selectMenuItem: (index?: number) => Menu.MenuOption
-    }
-
     export interface MenuOption {
         /**
          * Optional font-awesome icon
@@ -748,6 +737,41 @@ export namespace Menu {
         labelHighlights: number[]
         detailHighlights: number[]
     }
+
+    export type IMenuFilter = (options: any[], searchString: string) => IMenuOptionWithHighlights[]
+
+    export type filterFunc = (
+        items: Menu.MenuOption[],
+        searchString: string,
+    ) => IMenuOptionWithHighlights[]
+
+    export interface IMenuFilters {
+        getDefault(): IMenuFilter
+        getByName(name: string): IMenuFilter
+    }
+
+    export interface MenuInstance {
+        onHide: IEvent<void>
+        onItemSelected: IEvent<any>
+        onSelectedItemChanged: IEvent<Menu.MenuOption>
+        onFilterTextChanged: IEvent<string>
+        selectedItem: MenuOption
+        setLoading(isLoading: boolean): void
+        setItems(items: MenuOption[]): void
+        isOpen(): boolean
+        show(): void
+        hide(): void
+        setFilterFunction(filterFn: filterFunc): void
+    }
+
+    export interface Api {
+        create: () => MenuInstance
+        closeActiveMenu: () => void
+        isMenuOpen: () => boolean
+        nextMenuItem: () => void
+        previousMenuItem: () => void
+        selectMenuItem: (index?: number) => Menu.MenuOption
+    }
 }
 
 export interface IColors {
@@ -769,13 +793,16 @@ export namespace Plugin {
         contextMenu: any /* TODO */
         diagnostics: Diagnostics.Api
         editors: EditorManager
+        filter: Menu.IMenuFilters
         input: Input.InputManager
         language: any /* TODO */
         log: any /* TODO */
         notifications: Notifications.Api
         overlays: Overlays.Api
         plugins: IPluginManager
+        search: Search.ISearch
         sidebar: Sidebar.Api
+        ui: Ui.IUi
         menu: Menu.Api
         process: Process
         recorder: Recorder
@@ -783,5 +810,7 @@ export namespace Plugin {
         statusBar: StatusBar
         windows: IWindowManager
         workspace: Workspace.Api
+
+        populateQuickFix(entries: QuickFixEntry[]): void
     }
 }
