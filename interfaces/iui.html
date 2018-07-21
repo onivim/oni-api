@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Commands | oni-api</title>
+	<title>IUi | oni-api</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,101 +56,61 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="commands.html">Commands</a>
+					<a href="iui.html">IUi</a>
 				</li>
 			</ul>
-			<h1>Module Commands</h1>
+			<h1>Interface IUi</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>API surface area for registering and executing commands</p>
-					</div>
-				</div>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">IUi</span>
+					</li>
+				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
-							<h3>Interfaces</h3>
+						<section class="tsd-index-section tsd-is-external">
+							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/commands.api.html" class="tsd-kind-icon">Api</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/commands.icommand.html" class="tsd-kind-icon">ICommand</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Type aliases</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="commands.html#commandcallback" class="tsd-kind-icon">Command<wbr>Callback</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="commands.html#commandenabledcallback" class="tsd-kind-icon">Command<wbr>Enabled<wbr>Callback</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-external"><a href="iui.html#getfileicon" class="tsd-kind-icon">get<wbr>File<wbr>Icon</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Type aliases</h2>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
-					<a name="commandcallback" class="tsd-anchor"></a>
-					<h3>Command<wbr>Callback</h3>
-					<div class="tsd-signature tsd-kind-icon">Command<wbr>Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/c2d5414/src/index.ts#L23">index.ts:23</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+					<a name="getfileicon" class="tsd-anchor"></a>
+					<h3>get<wbr>File<wbr>Icon</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>File<wbr>Icon<span class="tsd-signature-symbol">(</span>fileName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/onivim/oni-api/blob/c2d5414/src/Ui.ts#L2">Ui.ts:2</a></li>
 								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-parameters-title">Parameters</h4>
-										<ul class="tsd-parameters">
-											<li>
-												<h5><span class="tsd-flag ts-flagOptional">Optional</span> args: <span class="tsd-signature-type">any</span></h5>
-											</li>
-										</ul>
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
-					<a name="commandenabledcallback" class="tsd-anchor"></a>
-					<h3>Command<wbr>Enabled<wbr>Callback</h3>
-					<div class="tsd-signature tsd-kind-icon">Command<wbr>Enabled<wbr>Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/c2d5414/src/index.ts#L24">index.ts:24</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>Type declaration</h4>
-						<ul class="tsd-parameters">
-							<li class="tsd-parameter-siganture">
-								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
-									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-								</ul>
-								<ul class="tsd-descriptions">
-									<li class="tsd-description">
-										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fileName: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -160,64 +120,22 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-module">
-						<a href="automation.html">Automation</a>
-					</li>
-					<li class="current tsd-kind-module">
-						<a href="commands.html">Commands</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="coordinates.html">Coordinates</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="input.html">Input</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="menu.html">Menu</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="notifications.html">Notifications</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="overlays.html">Overlays</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="plugin.html">Plugin</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="shapes.html">Shapes</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="sidebar.html">Sidebar</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="snippets.html">Snippets</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="tooltip.html">Tool<wbr>Tip</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="vim.html">Vim</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="workspace.html">Workspace</a>
-					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/commands.api.html" class="tsd-kind-icon">Api</a>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-is-external">
+						<a href="iui.html" class="tsd-kind-icon">IUi</a>
+						<ul>
+							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-external">
+								<a href="iui.html#getfileicon" class="tsd-kind-icon">get<wbr>File<wbr>Icon</a>
+							</li>
+						</ul>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="../interfaces/commands.icommand.html" class="tsd-kind-icon">ICommand</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="commands.html#commandcallback" class="tsd-kind-icon">Command<wbr>Callback</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="commands.html#commandenabledcallback" class="tsd-kind-icon">Command<wbr>Enabled<wbr>Callback</a>
-					</li>
+				</ul>
+				<ul class="after-current">
 				</ul>
 			</nav>
 		</div>

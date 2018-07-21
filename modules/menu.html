@@ -74,6 +74,7 @@
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/menu.api.html" class="tsd-kind-icon">Api</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/menu.imenufilters.html" class="tsd-kind-icon">IMenu<wbr>Filters</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/menu.imenuoptionwithhighlights.html" class="tsd-kind-icon">IMenu<wbr>Option<wbr>With<wbr>Highlights</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/menu.menuinstance.html" class="tsd-kind-icon">Menu<wbr>Instance</a></li>
 								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/menu.menuoption.html" class="tsd-kind-icon">Menu<wbr>Option</a></li>
@@ -82,6 +83,7 @@
 						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="menu.html#imenufilter" class="tsd-kind-icon">IMenu<wbr>Filter</a></li>
 								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="menu.html#filterfunc" class="tsd-kind-icon">filter<wbr>Func</a></li>
 							</ul>
 						</section>
@@ -91,12 +93,46 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="imenufilter" class="tsd-anchor"></a>
+					<h3>IMenu<wbr>Filter</h3>
+					<div class="tsd-signature tsd-kind-icon">IMenu<wbr>Filter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/c2d5414/src/index.ts#L741">index.ts:741</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span>, searchString<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/menu.imenuoptionwithhighlights.html" class="tsd-signature-type">IMenuOptionWithHighlights</a><span class="tsd-signature-symbol">[]</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>options: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+											</li>
+											<li>
+												<h5>searchString: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="../interfaces/menu.imenuoptionwithhighlights.html" class="tsd-signature-type">IMenuOptionWithHighlights</a><span class="tsd-signature-symbol">[]</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 					<a name="filterfunc" class="tsd-anchor"></a>
 					<h3>filter<wbr>Func</h3>
 					<div class="tsd-signature tsd-kind-icon">filter<wbr>Func<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/d1849b0/src/index.ts#L694">index.ts:694</a></li>
+							<li>Defined in <a href="https://github.com/onivim/oni-api/blob/c2d5414/src/index.ts#L743">index.ts:743</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -182,6 +218,9 @@
 						<a href="../interfaces/menu.api.html" class="tsd-kind-icon">Api</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/menu.imenufilters.html" class="tsd-kind-icon">IMenu<wbr>Filters</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/menu.imenuoptionwithhighlights.html" class="tsd-kind-icon">IMenu<wbr>Option<wbr>With<wbr>Highlights</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
@@ -189,6 +228,9 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="../interfaces/menu.menuoption.html" class="tsd-kind-icon">Menu<wbr>Option</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="menu.html#imenufilter" class="tsd-kind-icon">IMenu<wbr>Filter</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="menu.html#filterfunc" class="tsd-kind-icon">filter<wbr>Func</a>
