@@ -7,6 +7,11 @@ import { Event, IEvent } from "oni-types"
 import * as Search from "./Search"
 import * as Ui from "./Ui"
 
+export {
+    Search,
+    Ui,
+}
+
 export type DisposeFunction = () => void
 
 export interface QuickFixEntry {
