@@ -98,9 +98,11 @@ export namespace Overlays {
 export namespace Workspace {
     export interface Api {
         activeWorkspace: string
-        onDirectoryChanged: IEvent<string>
 
+        onDirectoryChanged: IEvent<string>
         changeDirectory(newWorkspaceDirectory: string): void
+
+        applyEdits(edits: types.WorkspaceEdit): Promise<void>
     }
 }
 
