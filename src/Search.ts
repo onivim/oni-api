@@ -1,4 +1,4 @@
-import { IEvent } from "oni-types"
+import { IEvent } from "./Event"
 
 export interface ResultItem {
     fileName: string

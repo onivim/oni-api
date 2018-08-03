@@ -2,7 +2,7 @@ import * as ChildProcess from "child_process"
 
 import * as types from "vscode-languageserver-types"
 
-import { Event, IEvent } from "oni-types"
+import { Event, IEvent } from "./Event"
 
 import * as Search from "./Search"
 import * as Ui from "./Ui"
@@ -10,6 +10,8 @@ import * as Ui from "./Ui"
 export {
     Search,
     Ui,
+    IEvent,
+    Event,
 }
 
 export type DisposeFunction = () => void
