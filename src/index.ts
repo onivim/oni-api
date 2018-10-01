@@ -450,7 +450,7 @@ export interface Editor {
 
     activeBuffer: Buffer
 
-    init(filesToOpen: string[]): void
+    init(filesToOpen: string[], foldersToOpen: string[]): void
 
     /**
      * Helper function to queue / block input while a long-running process
