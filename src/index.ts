@@ -58,6 +58,40 @@ export interface Configuration {
     setValues(configurationValues: ConfigurationValues): void
 }
 
+export namespace Preview {
+    export interface PreviewContext {
+        filePath: string
+        language: string
+    }
+
+    /**
+     * Previewer
+     *
+     * Interface for a preview strategy
+     */
+    export interface Previewer {
+        render(context: PreviewContext): JSX.Element
+    }
+    
+    export interface Api {
+        /**
+         * Register a preview strategy
+         */
+        registerPreviewer(identifier: string, previewer: Previewer): void
+
+        /**
+         * Set the default preview strategy for a filetype
+         */
+        registerDefaultPreviewerForLanguage(language: string, previewIdentifier: string): void
+        
+
+        /**
+         * Open the preview experience
+         */
+        openPreview(openMode: FileOpenMode): Promise<void>
+    }
+}
+
 export namespace Notifications {
     export interface Notification {
         onClick: IEvent<void>
@@ -811,6 +845,7 @@ export namespace Plugin {
         sidebar: Sidebar.Api
         ui: Ui.IUi
         menu: Menu.Api
+        preview: Preview.Api
         process: Process
         recorder: Recorder
         snippets: Snippets.SnippetManager
